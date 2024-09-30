@@ -35,7 +35,7 @@ export const apiEndpoints = [
     {
         id: 4,
         requestType: "GET",
-        url: "/accounts/1234/payments",
+        url: "/payments/accounts/DE89370400440532013000/",
         summary: "List payments for an account",
         sampleRequestBody: null,
     },
