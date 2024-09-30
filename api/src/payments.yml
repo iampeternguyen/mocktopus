@@ -1,0 +1,311 @@
+openapi: 3.0.0
+info:
+  title: Payments API
+  description: API to manage payments including SEPA, SWIFT, and other types of transactions.
+  version: 2.0.0
+servers:
+  - url: https://api.example.com/v1
+    description: Main (production) server
+paths:
+  /payments:
+    post:
+      summary: Initiate a payment
+      description: Start a payment transaction (SEPA, SWIFT, or others) between two accounts.
+      tags:
+        - Payments
+      requestBody:
+        description: Payment details for SEPA, SWIFT, or other payment types
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                paymentType:
+                  type: string
+                  description: Type of the payment (e.g., SEPA, SWIFT)
+                  example: "SEPA"
+                  enum: [SEPA, SWIFT]
+                creditorName:
+                  type: string
+                  description: Name of the creditor (recipient)
+                  example: "John Doe"
+                creditorAccount:
+                  type: string
+                  description: IBAN (for SEPA) or Account Number (for SWIFT)
+                  example: "DE89370400440532013000"
+                creditorBIC:
+                  type: string
+                  description: BIC (required for SWIFT payments)
+                  example: "COBADEFFXXX"
+                debtorName:
+                  type: string
+                  description: Name of the debtor (payer)
+                  example: "Jane Smith"
+                debtorAccount:
+                  type: string
+                  description: IBAN (for SEPA) or Account Number (for SWIFT)
+                  example: "GB33BUKB20201555555555"
+                debtorBIC:
+                  type: string
+                  description: BIC (required for SWIFT payments)
+                  example: "NWBKGB2L"
+                amount:
+                  type: number
+                  format: float
+                  description: The amount to transfer
+                  example: 1000.50
+                currency:
+                  type: string
+                  description: Currency code in ISO 4217 format (EUR for SEPA)
+                  example: "EUR"
+                paymentReference:
+                  type: string
+                  description: A reference for the payment (invoice number, etc.)
+                  example: "Invoice #2024-0023"
+                executionDate:
+                  type: string
+                  format: date
+                  description: The date when the payment should be executed
+                  example: "2024-09-30"
+      responses:
+        '201':
+          description: Payment successfully created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  paymentId:
+                    type: string
+                    description: Unique identifier for the payment
+                    example: "pay_123456789"
+                  status:
+                    type: string
+                    description: Status of the payment
+                    example: "pending"
+        '400':
+          description: Invalid input data
+        '500':
+          description: Server error
+
+  /payments/{paymentId}:
+    get:
+      summary: Get payment status
+      description: Retrieve the status of a specific payment.
+      tags:
+        - Payments
+      parameters:
+        - name: paymentId
+          in: path
+          required: true
+          description: The ID of the payment transaction
+          schema:
+            type: string
+            example: "pay_123456789"
+      responses:
+        '200':
+          description: Payment status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  paymentId:
+                    type: string
+                    description: Unique identifier for the payment
+                    example: "pay_123456789"
+                  status:
+                    type: string
+                    description: Status of the payment
+                    example: "completed"
+                  paymentType:
+                    type: string
+                    description: Type of the payment (SEPA, SWIFT)
+                    example: "SEPA"
+                  creditorAccount:
+                    type: string
+                    example: "DE89370400440532013000"
+                  debtorAccount:
+                    type: string
+                    example: "GB33BUKB20201555555555"
+                  amount:
+                    type: number
+                    example: 1000.50
+                  currency:
+                    type: string
+                    example: "EUR"
+                  paymentReference:
+                    type: string
+                    example: "Invoice #2024-0023"
+        '404':
+          description: Payment not found
+        '500':
+          description: Server error
+
+  /payments:
+    get:
+      summary: List all payments
+      description: Retrieve a list of all payments, optionally filtered by status, type, or date.
+      tags:
+        - Payments
+      parameters:
+        - name: paymentType
+          in: query
+          required: false
+          description: Filter by payment type (SEPA, SWIFT)
+          schema:
+            type: string
+            example: "SEPA"
+        - name: status
+          in: query
+          required: false
+          description: Filter by payment status
+          schema:
+            type: string
+            example: "pending"
+        - name: fromDate
+          in: query
+          required: false
+          description: Filter by payments from this date (inclusive)
+          schema:
+            type: string
+            format: date
+            example: "2024-01-01"
+        - name: toDate
+          in: query
+          required: false
+          description: Filter by payments until this date (inclusive)
+          schema:
+            type: string
+            format: date
+            example: "2024-12-31"
+      responses:
+        '200':
+          description: List of payments
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    paymentId:
+                      type: string
+                      description: Unique identifier for the payment
+                      example: "pay_123456789"
+                    paymentType:
+                      type: string
+                      description: Type of the payment (SEPA, SWIFT)
+                      example: "SEPA"
+                    status:
+                      type: string
+                      description: Status of the payment
+                      example: "completed"
+                    amount:
+                      type: number
+                      example: 1000.50
+                    currency:
+                      type: string
+                      example: "EUR"
+                    executionDate:
+                      type: string
+                      format: date
+                      example: "2024-09-30"
+                    paymentReference:
+                      type: string
+                      example: "Invoice #2024-0023"
+        '500':
+          description: Server error
+
+  /accounts/{iban}/payments:
+    get:
+      summary: List payments for an account
+      description: Retrieve all payments related to a specific account (IBAN), either as debtor or creditor.
+      tags:
+        - Accounts
+      parameters:
+        - name: iban
+          in: path
+          required: true
+          description: IBAN of the account to filter by
+          schema:
+            type: string
+            example: "DE89370400440532013000"
+        - name: paymentType
+          in: query
+          required: false
+          description: Filter by payment type (SEPA, SWIFT)
+          schema:
+            type: string
+            example: "SEPA"
+        - name: fromDate
+          in: query
+          required: false
+          description: Filter by payments from this date (inclusive)
+          schema:
+            type: string
+            format: date
+            example: "2024-01-01"
+        - name: toDate
+          in: query
+          required: false
+          description: Filter by payments until this date (inclusive)
+          schema:
+            type: string
+            format: date
+            example: "2024-12-31"
+        - name: status
+          in: query
+          required: false
+          description: Filter by payment status (e.g., pending, completed)
+          schema:
+            type: string
+            example: "completed"
+      responses:
+        '200':
+          description: List of payments for the specified account
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    paymentId:
+                      type: string
+                      description: Unique identifier for the payment
+                      example: "pay_123456789"
+                    paymentType:
+                      type: string
+                      description: Type of the payment (SEPA, SWIFT)
+                      example: "SEPA"
+                    creditorAccount:
+                      type: string
+                      description: Creditor IBAN
+                      example: "DE89370400440532013000"
+                    debtorAccount:
+                      type: string
+                      description: Debtor IBAN
+                      example: "GB33BUKB20201555555555"
+                    amount:
+                      type: number
+                      example: 1000.50
+                    currency:
+                      type: string
+                      example: "EUR"
+                    status:
+                      type: string
+                      description: Status of the payment
+                      example: "completed"
+                    executionDate:
+                      type: string
+                      format: date
+                      example: "2024-09-30"
+                    paymentReference:
+                      type: string
+                      example: "Invoice #2024-0023"
+        '404':
+          description: No payments found for the specified account
+        '500':
+          description: Server error
