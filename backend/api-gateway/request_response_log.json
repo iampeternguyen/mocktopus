@@ -1,0 +1,108 @@
+[
+  {
+    "url": "/exchange-service/exchange-rates/historical?limit=10",
+    "method": "GET",
+    "request": {},
+    "response": {
+      "baseCurrency": "USD",
+      "targetCurrency": "EUR",
+      "rates": [
+        {
+          "date": "2024-09-20",
+          "rate": 0.926
+        },
+        {
+          "date": "2024-09-19",
+          "rate": 0.928
+        },
+        {
+          "date": "2024-09-18",
+          "rate": 0.927
+        },
+        {
+          "date": "2024-09-17",
+          "rate": 0.929
+        },
+        {
+          "date": "2024-09-16",
+          "rate": 0.93
+        },
+        {
+          "date": "2024-09-15",
+          "rate": 0.931
+        },
+        {
+          "date": "2024-09-14",
+          "rate": 0.933
+        },
+        {
+          "date": "2024-09-13",
+          "rate": 0.934
+        },
+        {
+          "date": "2024-09-12",
+          "rate": 0.935
+        },
+        {
+          "date": "2024-09-11",
+          "rate": 0.937
+        }
+      ]
+    },
+    "timestamp": "2024-09-30T18:29:10.276Z"
+  },
+  {
+    "url": "/exchange-service/exchange-rates/historical",
+    "method": "GET",
+    "request": {},
+    "response": {
+      "response": {
+        "baseCurrency": "USD",
+        "rates": [
+          {
+            "targetCurrency": "EUR",
+            "rate": 0.85,
+            "timestamp": "2024-09-30T10:15:30Z"
+          }
+        ]
+      }
+    },
+    "timestamp": "2024-09-30T18:37:48.833Z"
+  },
+  {
+    "url": "/exchange-service/exchange-rates",
+    "method": "GET",
+    "request": {},
+    "response": {
+      "response": {
+        "baseCurrency": "USD",
+        "rates": [
+          {
+            "targetCurrency": "EUR",
+            "rate": 0.85,
+            "timestamp": "2024-09-30T10:15:30Z"
+          }
+        ]
+      }
+    },
+    "timestamp": "2024-09-30T18:38:44.088Z"
+  },
+  {
+    "url": "/exchange-service/exchange-rates/historical",
+    "method": "GET",
+    "request": {},
+    "response": {
+      "response": {
+        "baseCurrency": "USD",
+        "rates": [
+          {
+            "targetCurrency": "EUR",
+            "rate": 0.85,
+            "timestamp": "2024-09-30T10:15:30Z"
+          }
+        ]
+      }
+    },
+    "timestamp": "2024-09-30T18:47:13.123Z"
+  }
+]

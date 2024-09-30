@@ -223,6 +223,13 @@ paths:
             type: string
             format: date
             example: "2024-09-30"
+        - name: limit
+          in: query
+          required: false
+          description: End date for historical data (inclusive)
+          schema:
+            type: number
+            example: "10"
       responses:
         '200':
           description: Historical exchange rates successfully retrieved

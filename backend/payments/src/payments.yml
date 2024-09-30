@@ -4,7 +4,7 @@ info:
   description: API to manage payments including SEPA, SWIFT, and other types of transactions.
   version: 2.0.0
 servers:
-  - url: http://localhost:3000
+  - url: http://localhost:8001
     description: Local development server
 paths:
   /payments:

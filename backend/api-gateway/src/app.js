@@ -24,7 +24,7 @@ const chatGptApiKey = process.env.OPENAI_API_KEY; // Replace with your ChatGPT A
 
 // File to log requests and responses
 const logFilePath = 'request_response_log.json';
-let requestResponseLog = [];
+let requestResponseLog =JSON.parse( fs.readFileSync(logFilePath, 'utf-8'));
 
 // Function to log requests and responses
 function logRequestResponse(url,method, reqBody, responseBody) {
@@ -52,13 +52,12 @@ async function callExternalService(url, method, reqBody) {
 }
 
 // Function to get a response from ChatGPT based on the monitored data
-async function getChatGptResponse(logData) {
+async function getChatGptResponse(url,method,logData) {
     try {
         const response = await axios.post(chatGptAPIUrl, {
             model: "gpt-3.5-turbo", // or whichever model you're using
             messages: [
-                { role: "system", content: "You are a helpful assistant." },
-                { role: "user", content: `Based on the following request and responses, generate a relevant response: ${JSON.stringify(logData)}` }
+                { role: "user", content: `Based on the ${url} and method ${method}, generate a relevant response: ${JSON.stringify(logData)} in json format without newline characters` }
             ],
         }, {
             headers: {
@@ -67,13 +66,25 @@ async function getChatGptResponse(logData) {
             },
         });
 
-        return response.data.choices[0].message.content; // Extract the content from the response
+        return JSON.parse(response.data.choices[0].message.content); // Extract the content from the response
     } catch (error) {
         console.error('Error getting response from ChatGPT:', error.message);
         return null; // Return null if the API call fails
     }
 }
-
+app.use(
+    (req, res, next) => {
+      console.log("middleware running");
+      res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
+      res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, POST, PUT, DELETE, OPTIONS"
+      ); // Allow specific methods
+      res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+      next();
+    },
+    express.json()
+  );
 // Middleware to handle requests
 app.use(async (req, res) => {
     // Log the incoming request
@@ -102,7 +113,7 @@ app.use(async (req, res) => {
         console.log('External service is down. Switching to ChatGPT for response.');
 
         // Use the log data for ChatGPT to generate a response
-        const aiResponse = await getChatGptResponse(requestResponseLog);
+        const aiResponse = await getChatGptResponse(serviceUrlWithPath,req.method, requestResponseLog);
         
         if (aiResponse) {
             return res.status(200).json({ response: aiResponse });
@@ -111,19 +122,7 @@ app.use(async (req, res) => {
         }
     }
 });
-app.use(
-  (req, res, next) => {
-    console.log("middleware running");
-    res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PUT, DELETE, OPTIONS"
-    ); // Allow specific methods
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
-    next();
-  },
-  express.json()
-);
+
 // Start the API gateway server
 const PORT = process.env.GATEWAY_API_PORT || 3000;
 app.listen(PORT, () => {
