@@ -9012,5 +9012,2484 @@
     "request": {},
     "response": "Server is healthy.",
     "timestamp": "2024-09-30T20:44:44.448Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:47:53.737Z"
+  },
+  {
+    "url": "/payments-services/shutdown",
+    "method": "GET",
+    "request": {},
+    "response": "Server is shutting down...",
+    "timestamp": "2024-09-30T20:47:54.859Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:48:14.080Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:48:24.318Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:48:42.763Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:48:47.767Z"
+  },
+  {
+    "url": "/payments-services/shutdown",
+    "method": "GET",
+    "request": {},
+    "response": "Server is shutting down...",
+    "timestamp": "2024-09-30T20:48:49.321Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:48:52.767Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:07.765Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:13.384Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:18.389Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:23.427Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:28.634Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:33.644Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:38.754Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:43.961Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:48.972Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:54.083Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:49:59.289Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:04.298Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:09.408Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:14.515Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:15.517Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:16.617Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:17.620Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:18.626Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:19.622Z"
+  },
+  {
+    "url": "/payments-services/shutdown",
+    "method": "GET",
+    "request": {},
+    "response": "Server is shutting down...",
+    "timestamp": "2024-09-30T20:50:20.444Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:20.654Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:21.726Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:22.726Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:23.729Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:24.729Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:25.730Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:26.834Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:27.835Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:28.835Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:30.782Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:31.785Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:32.787Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:33.797Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:34.793Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:35.801Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:36.797Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:38.303Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:50:39.302Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:51:20.861Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:51:21.839Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:51:22.848Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:51:23.842Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:52:00.242Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:52:00.247Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:52:01.212Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:52:02.217Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:52:02.232Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:52:03.221Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:11.749Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:12.519Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:13.524Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:13.724Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:13.870Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:14.539Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:15.544Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:15.744Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:16.546Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:17.552Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:17.743Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:18.177Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:18.556Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:18.974Z"
+  },
+  {
+    "url": "/payments-services/shutdown",
+    "method": "GET",
+    "request": {},
+    "response": "Server is shutting down...",
+    "timestamp": "2024-09-30T20:53:19.526Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:19.559Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:19.788Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:20.563Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:21.569Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:21.773Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:22.569Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:23.176Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:23.574Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:23.790Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:24.053Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:24.577Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:25.583Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:25.762Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:26.585Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:27.591Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:27.758Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:28.181Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:28.597Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:29.193Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:29.600Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:29.773Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:30.602Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:31.605Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:31.741Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:32.609Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:33.176Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:33.613Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:33.774Z"
+  },
+  {
+    "url": "/payments-services/shutdown",
+    "method": "GET",
+    "request": {},
+    "response": "Server is shutting down...",
+    "timestamp": "2024-09-30T20:53:34.176Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:34.201Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:34.617Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:35.627Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:35.767Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:36.625Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:37.629Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:37.777Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:38.177Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:38.666Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:39.312Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:39.658Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:39.797Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:40.659Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:41.647Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:41.786Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:42.649Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:43.177Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:43.653Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:43.782Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:44.420Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:44.657Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:45.667Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:45.792Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:46.665Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:47.760Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:53:47.768Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:03.882Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:03.918Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:04.034Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:04.955Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:04.965Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:06.051Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:06.137Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:07.053Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:08.123Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:08.141Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:10.149Z"
+  },
+  {
+    "url": "/payments-services/shutdown",
+    "method": "GET",
+    "request": {},
+    "response": "Server is shutting down...",
+    "timestamp": "2024-09-30T20:54:13.169Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:15.154Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:40.551Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:45.660Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:50.660Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:54:55.659Z"
+  },
+  {
+    "url": "/payments-services/shutdown",
+    "method": "GET",
+    "request": {},
+    "response": "Server is shutting down...",
+    "timestamp": "2024-09-30T20:54:58.534Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:55:00.763Z"
+  },
+  {
+    "url": "/payments-services/shutdown",
+    "method": "GET",
+    "request": {},
+    "response": "Server is shutting down...",
+    "timestamp": "2024-09-30T20:55:03.945Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:55:05.763Z"
+  },
+  {
+    "url": "/payments-services/shutdown",
+    "method": "GET",
+    "request": {},
+    "response": "Server is shutting down...",
+    "timestamp": "2024-09-30T20:55:07.338Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:55:10.764Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:55:40.882Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:55:51.136Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:55:54.234Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:56:35.147Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:56:36.886Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:56:40.186Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:56:41.906Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:56:45.294Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:56:50.407Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:56:51.913Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:56:55.405Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:56:56.929Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:00.410Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:02.031Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:05.417Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:07.038Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:10.428Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:12.040Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:15.430Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:17.043Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:19.048Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:19.635Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:20.053Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:38.085Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:38.118Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:39.103Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:39.132Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:40.105Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:40.134Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:41.107Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:41.135Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:42.111Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T20:57:42.138Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:40.447Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:40.503Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:41.750Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:41.775Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:42.511Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:42.521Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:43.514Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:43.519Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:44.147Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:44.521Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:44.529Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:45.143Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:45.520Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:45.532Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:46.142Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:47.142Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:48.151Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:00:49.155Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:03:20.490Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:03:21.514Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:03:22.530Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:02.029Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:03.073Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:04.091Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:05.106Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:06.126Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:27.749Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:28.766Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:29.782Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:30.797Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:31.813Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:32.832Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:33.845Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:34.857Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:36.854Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:38.922Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:40.925Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:42.928Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:44.930Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:46.934Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:48.937Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:50.941Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:52.944Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:54.945Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:56.948Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:08:58.951Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:00.954Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:02.988Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:04.992Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:06.994Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:08.097Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:10.102Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:12.105Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:13.207Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:15.212Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:17.215Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:18.316Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:20.322Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:22.322Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:23.439Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:25.443Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:27.444Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:28.548Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:30.553Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:32.554Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:33.624Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:35.628Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:37.629Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:39.664Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:41.666Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:43.669Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:45.680Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:45.690Z"
+  },
+  {
+    "url": "/exchange-services/health",
+    "method": "GET",
+    "request": {},
+    "response": {
+      "response": {
+        "baseCurrency": "USD",
+        "rates": [
+          {
+            "targetCurrency": "EUR",
+            "rate": 0.85,
+            "timestamp": "2024-09-30T10:15:30Z"
+          }
+        ]
+      }
+    },
+    "timestamp": "2024-09-30T21:09:47.244Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:47.690Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:47.693Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:49.693Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:49.702Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:51.695Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:51.699Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:53.700Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:53.707Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:55.705Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:55.711Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:57.708Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:57.710Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:58.719Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:58.728Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:59.736Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:09:59.747Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:00.750Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:00.763Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:01.763Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:01.775Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:03.764Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:03.769Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:05.769Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:05.775Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:07.770Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:07.778Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:08.838Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:08.845Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:10.842Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:10.847Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:12.843Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:12.848Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:14.877Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:14.883Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:15.936Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:15.944Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:16.949Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:16.964Z"
+  },
+  {
+    "url": "/exchange-services/health",
+    "method": "GET",
+    "request": {},
+    "response": {
+      "response": {
+        "baseCurrency": "USD",
+        "rates": [
+          {
+            "targetCurrency": "EUR",
+            "rate": 0.85,
+            "timestamp": "2024-09-30T10:15:30Z"
+          }
+        ]
+      }
+    },
+    "timestamp": "2024-09-30T21:10:17.236Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:17.962Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:17.976Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:18.976Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:18.994Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:19.993Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:20.008Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:21.006Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:21.019Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:22.021Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:22.032Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:23.037Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:23.045Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:24.053Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:24.061Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:25.067Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:25.076Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:26.086Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:26.094Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:27.102Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:27.114Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:28.118Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:28.127Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:29.134Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:29.142Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:30.147Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:30.155Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:31.160Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:31.170Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:32.179Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:32.190Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:33.197Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:33.205Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:34.215Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:34.223Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:35.230Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:35.238Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:36.245Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:36.254Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:37.261Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:37.272Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:38.278Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:38.286Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:39.292Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:39.299Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:40.307Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:40.316Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:41.322Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:41.330Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:42.338Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:42.350Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:43.356Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:43.364Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:44.369Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:44.381Z"
+  },
+  {
+    "url": "/payments-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:45.383Z"
+  },
+  {
+    "url": "/accounts-services/health",
+    "method": "GET",
+    "request": {},
+    "response": "Server is healthy.",
+    "timestamp": "2024-09-30T21:10:45.394Z"
   }
 ]

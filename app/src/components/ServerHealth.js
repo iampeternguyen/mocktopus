@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import "./ServerHealth.css"; // Importing CSS for styles
 
@@ -7,30 +7,31 @@ const ServerHealthComponent = ({ path, name }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Simulate health check
-  useEffect(() => {
-    const checkServerHealth = async () => {
+  const checkServerHealth = useCallback(
+    async (override = false) => {
       try {
-        if (loading) {
+        if (loading || (!isHealthy && override === false)) {
           return;
         }
         setError(null);
         setLoading(true);
         // Simulate an API call to check health based on the provided path
         const response = await fetch(`${path}/health`, { cache: "no-store" });
-        const isHealthy = (await response.json()) === "Server is healthy.";
-        setIsHealthy(isHealthy);
+        setIsHealthy((await response.json()) === "Server is healthy.");
       } catch (err) {
         setError("Failed to check server health.");
       } finally {
         setLoading(false);
       }
-    };
-
+    },
+    [loading, isHealthy, path]
+  );
+  // Simulate health check
+  useEffect(() => {
     const intervalId = setInterval(checkServerHealth, 1000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [loading, isHealthy, path, checkServerHealth]);
 
   const killServer = async () => {
     try {
@@ -56,6 +57,13 @@ const ServerHealthComponent = ({ path, name }) => {
         ></div>
         <button onClick={killServer} disabled={!isHealthy || loading}>
           Kill Server
+        </button>
+
+        <button
+          onClick={() => checkServerHealth(true)}
+          disabled={isHealthy || loading}
+        >
+          Check Health
         </button>
       </div>
     </div>

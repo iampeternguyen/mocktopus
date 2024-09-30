@@ -56,15 +56,12 @@ const server = app.listen(PORT, () => {
 // Endpoint to stop the server
 app.get('/shutdown', (req, res) => {
   if (server) {
-    res.send('Server is shutting down...');
     server.close(() => {
-      console.log('Server has been shut down.');
-      setTimeout(() => server.listen(PORT, () => {
-        console.log('server is restarting')
-      }), 10000)
+      console.log("Server has been shut down.");
+      res.send("Server is shutting down...");
     });
-  } else { 
-    res.send('Server is not running.');
+  } else {
+    res.send("Server is not running.");
   }
 });
 

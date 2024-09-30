@@ -50,7 +50,9 @@ const Main = () => {
         setResponseFromServer(JSON.stringify(data, null, 2));
       } else {
         const errorText = await response.text();
-        setResponseFromServer(`Error: Server did not return JSON. Response: ${errorText}`);
+        setResponseFromServer(
+          `Error: Server did not return JSON. Response: ${errorText}`
+        );
       }
     } catch (error) {
       console.error("Error fetching response:", error);
@@ -73,7 +75,20 @@ const Main = () => {
       <header style={styles.header}>
         <img style={styles.imgHeader} src={mascot} alt="Mocktopus mascot" />
         <h1 style={styles.title}>Mocktopus</h1>
-        <ServerHealthComponent name="payments" path={API_REQUEST + '/payments-services'}/>
+        <div>
+          <ServerHealthComponent
+            name="payments"
+            path={API_REQUEST + "/payments-services"}
+          />
+          <ServerHealthComponent
+            name="accounts"
+            path={API_REQUEST + "/accounts-services"}
+          />
+          <ServerHealthComponent
+            name="exchange"
+            path={API_REQUEST + "/exchange-services"}
+          />
+        </div>
       </header>
 
       <div style={styles.container}>
