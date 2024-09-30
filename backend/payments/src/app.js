@@ -145,7 +145,7 @@ app.get("/payments", (req, res) => {
 });
 
 // GET /accounts/:iban/payments - List payments for a specific IBAN
-app.get("/accounts/:iban/payments", (req, res) => {
+app.get("/payments/accounts/:iban", (req, res) => {
   const { iban } = req.params;
   const { paymentType, fromDate, toDate, status } = req.query;
 
