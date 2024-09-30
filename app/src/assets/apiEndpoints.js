@@ -1,0 +1,42 @@
+export const apiEndpoints = [
+    {
+        id: 1,
+        requestType: "POST",
+        url: "/payments",
+        summary: "Initiate a payment",
+        sampleRequestBody: {
+            paymentType: "SEPA",
+            creditorName: "John Doe",
+            creditorAccount: "DE89370400440532013000",
+            creditorBIC: "COBADEFFXXX",
+            debtorName: "Jane Smith",
+            debtorAccount: "GB33BUKB20201555555555",
+            debtorBIC: "NWBKGB2L",
+            amount: 1000.50,
+            currency: "EUR",
+            paymentReference: "Invoice #2024-0023",
+            executionDate: "2024-09-30",
+        },
+    },
+    {
+        id: 2,
+        requestType: "GET",
+        url: "/payments",
+        summary: "List all payments",
+        sampleRequestBody: null,
+    },
+    {
+        id: 3,
+        requestType: "GET",
+        url: "/payments/1234",
+        summary: "Get payment status",
+        sampleRequestBody: null,
+    },
+    {
+        id: 4,
+        requestType: "GET",
+        url: "/accounts/1234/payments",
+        summary: "List payments for an account",
+        sampleRequestBody: null,
+    },
+];
