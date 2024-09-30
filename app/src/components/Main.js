@@ -10,13 +10,9 @@ const API_REQUEST = `http://localhost:8004`;
 const Main = () => {
   const [endpointId, setEndpointId] = useState(0);
   const [url, setUrl] = useState("");
-
   const [payload, setPayload] = useState("");
-
   const [requestMethod, setRequestMethod] = useState("");
-
   const [responseFromServer, setResponseFromServer] = useState("");
-
   const [serverMode, setServerMode] = useState("Server is running");
   const [loading, setLoading] = useState(false);
 
@@ -43,28 +39,19 @@ const Main = () => {
       }
 
       const response = await fetch(API_REQUEST + url, options);
-
       const contentType = response.headers.get("Content-Type");
-
       const mockHeader = response.headers.get("x-mocks");
 
-      if (mockHeader) {
-        setServerMode("Running on mocks");
-      } else {
-        setServerMode("Running on real server");
-      }
+      setServerMode(mockHeader ? "Running on mocks" : "Running on real server");
 
       if (contentType && contentType.includes("application/json")) {
         const data = await response.json();
         setResponseFromServer(JSON.stringify(data, null, 2));
         console.log("DATA", data);
-        setLoading(false);
       } else {
         const errorText = await response.text();
         console.log("Err", errorText);
-        setResponseFromServer(
-          `Error: Server did not return JSON. Response: ${errorText}`
-        );
+        setResponseFromServer(`Error: Server did not return JSON. Response: ${errorText}`);
       }
     } catch (error) {
       console.error("Error fetching response:", error);
@@ -83,11 +70,12 @@ const Main = () => {
   };
 
   return (
-    <>
-      <header>
-        <h1> Mocktopus </h1>
-        <img style={styles.imgHeader} src={mascot} alt="Moctopus mascot" />
+    <div style={styles.appContainer}>
+      <header style={styles.header}>
+        <img style={styles.imgHeader} src={mascot} alt="Mocktopus mascot" />
+        <h1 style={styles.title}>Mocktopus</h1>
       </header>
+
       <div style={styles.container}>
         <form onSubmit={handleSubmit} style={styles.leftSide}>
           <h3>Send Request</h3>
@@ -98,6 +86,7 @@ const Main = () => {
             id="url-select"
             value={endpointId}
             onChange={(e) => handleSetRequest(e.target.value)}
+            style={styles.select}
           >
             <option value="0" disabled>
               Select a URL
@@ -108,29 +97,33 @@ const Main = () => {
               </option>
             ))}
           </select>
+
           <input
             type="text"
-            placeholder="request type"
+            placeholder="Request Type"
             value={requestMethod}
             onChange={(e) => setRequestMethod(e.target.value)}
-          ></input>
+            style={styles.input}
+          />
           <input
             type="text"
-            placeholder="url"
+            placeholder="URL"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-          ></input>
+            style={styles.input}
+          />
           <textarea
             value={checkJsonInput(payload)}
             onChange={(e) => setPayload(e.target.value)}
-            placeholder="Enter payload JSON"
+            placeholder="Enter Payload JSON"
             rows={10}
-            cols={40}
+            style={styles.textArea}
           />
           <button style={styles.submitButton} type="submit">
             Submit
           </button>
         </form>
+
         <div style={styles.rightSide}>
           <h3>Response from Server</h3>
           {loading ? (
@@ -141,7 +134,7 @@ const Main = () => {
               <textarea
                 value={responseFromServer}
                 rows={15}
-                cols={50}
+                style={styles.textArea}
                 readOnly
               />
             </>
@@ -156,7 +149,7 @@ const Main = () => {
           }
         `}
       </style>
-    </>
+    </div>
   );
 };
 
