@@ -1,5 +1,6 @@
 export const apiEndpoints = [
     {
+        id: 1,
         requestType: "POST",
         url: "/payments",
         summary: "Initiate a payment",
@@ -18,20 +19,23 @@ export const apiEndpoints = [
         },
     },
     {
+        id: 2,
         requestType: "GET",
         url: "/payments",
         summary: "List all payments",
         sampleRequestBody: null,
     },
     {
+        id: 3,
         requestType: "GET",
-        url: "/payments/{paymentId}",
+        url: "/payments/1234",
         summary: "Get payment status",
         sampleRequestBody: null,
     },
     {
+        id: 4,
         requestType: "GET",
-        url: "/accounts/{iban}/payments",
+        url: "/accounts/1234/payments",
         summary: "List payments for an account",
         sampleRequestBody: null,
     },

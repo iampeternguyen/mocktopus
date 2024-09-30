@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import mascot from "../assets/mascot.webp";
-import { apiEndpoints } from "../assets/apiEndpoints"
+import { apiEndpoints } from "../assets/apiEndpoints";
 
 const API_REQUEST = `http://localhost:8001`;
 
 const Main = () => {
-  const [url, setUrl] = useState(API_REQUEST);
+  const [endpointId, setEndpointId] = useState(0);
+  const [url, setUrl] = useState("");
 
-  const [payload, setPayload] = useState("{}");
+  const [payload, setPayload] = useState("");
 
-  const [requestMethod, setRequestMethod] = useState()
+  const [requestMethod, setRequestMethod] = useState("");
 
   const [responseFromServer, setResponseFromServer] = useState("");
 
@@ -64,30 +65,36 @@ const Main = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form submission from reloading the page
 
-    if (!url || !payload) {
+    if (!url) {
       alert("Please enter both a URL and a payload.");
       return;
     }
 
     try {
-      const response = await fetch(url, {
+      const options = {
         method: requestMethod,
         headers: {
           "Content-Type": "application/json",
         },
-        body: payload, // Assuming payload is a valid JSON string
-      });
+      };
+
+      if (payload && payload !== "null") {
+        options.body = payload;
+      }
+      const response = await fetch(API_REQUEST + url, options);
 
       const contentType = response.headers.get("Content-Type");
 
       if (contentType && contentType.includes("application/json")) {
         const data = await response.json();
         setResponseFromServer(JSON.stringify(data, null, 2));
-        console.log("DATA", data)
+        console.log("DATA", data);
       } else {
         const errorText = await response.text();
-        console.log("Err", errorText)
-        setResponseFromServer(`Error: Server did not return JSON. Response: ${errorText}`);
+        console.log("Err", errorText);
+        setResponseFromServer(
+          `Error: Server did not return JSON. Response: ${errorText}`
+        );
       }
     } catch (error) {
       console.error("Error fetching response:", error);
@@ -95,13 +102,13 @@ const Main = () => {
     }
   };
 
-  const handleSetRequest = (option) => {
-    console.log("IS it running?")
-    setUrl(option);
-    setRequestMethod(option.requestType)
-    setPayload(option.sampleRequestBody)
-  }
-
+  const handleSetRequest = (endpointId) => {
+    const option = apiEndpoints.find((endpoint) => endpoint.id == endpointId);
+    setEndpointId(endpointId);
+    setUrl(option.url);
+    setRequestMethod(option.requestType);
+    setPayload(JSON.stringify(option.sampleRequestBody));
+  };
 
   return (
     <>
@@ -117,12 +124,14 @@ const Main = () => {
           <label htmlFor="url-select">Select a URL:</label>
           <select
             id="url-select"
-            value={url}
+            value={endpointId}
             onChange={(e) => handleSetRequest(e.target.value)}
           >
-            <option value="" disabled>Select a URL</option>
+            <option value="0" disabled>
+              Select a URL
+            </option>
             {apiEndpoints.map((option, index) => (
-              <option key={index} value={option.url}>
+              <option key={index} value={option.id}>
                 {option.requestType} {option.url}
               </option>
             ))}
