@@ -1,7 +1,18 @@
 const express = require("express");
 const { faker } = require("@faker-js/faker"); // Correct import
 const app = express();
-app.use(express.json());
+require("dotenv").config({path: `${__dirname}/../../.env`});
+
+// Middleware to parse JSON requests
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  ); // Allow specific methods
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+  next();
+}, express.json());
 
 const ibanList = [
   "DE89370400440532013000",
@@ -173,7 +184,7 @@ app.use((req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PAYMENTS_API_PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Payments API server is running on port ${PORT}`);
 });

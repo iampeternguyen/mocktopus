@@ -1,6 +1,18 @@
 {
-  "dependencies": {
-    "express": "^4.21.0",
-    "faker": "^6.6.6"
-  }
+    "name": "mocktopus-monorepo",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "concurrently \"npm run start --prefix api\" \"npm run start --prefix app\""
+    },
+    "workspaces": [
+        "api/",
+        "app/"
+    ],
+    "dependencies": {
+        "express": "^4.21.0",
+        "faker": "^6.6.6"
+    },
+    "devDependencies": {
+        "concurrently": "^9.0.1"
+    }
 }
