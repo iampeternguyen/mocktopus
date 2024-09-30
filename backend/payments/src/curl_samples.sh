@@ -1,10 +1,10 @@
 # 1. Initiate a Payment
-curl -X POST http://localhost:3000/payments \
+curl -X POST http://localhost:8001/payments \
 -H "Content-Type: application/json" \
 -d '{
     "paymentType": "SEPA",
     "creditorName": "John Doe",
-    "creditorAccount": "DE89370400440532013000",
+    "creditorAccount": "DE89370400440532018001",
     "creditorBIC": "COBADEFFXXX",
     "debtorName": "Jane Smith",
     "debtorAccount": "GB33BUKB20201555555555",
@@ -16,13 +16,13 @@ curl -X POST http://localhost:3000/payments \
 }'
 
 # 2. Get Payment Status
-curl -X GET http://localhost:3000/payments/pay_123456789
+curl -X GET http://localhost:8001/payments/pay_123456789
 
 # 3. List All Payments
-curl -X GET http://localhost:3000/payments
+curl -X GET http://localhost:8001/payments
 
 # 4. List Payments for an Account (by IBAN)
-curl -X GET http://localhost:3000/accounts/DE89370400440532013000/payments
+curl -X GET http://localhost:8001/accounts/DE89370400440532018001/payments
 
 # 5. List Payments for an Account with Filters (by IBAN)
-curl -X GET "http://localhost:3000/accounts/DE89370400440532013000/payments?paymentType=SEPA&status=pending&fromDate=2024-01-01&toDate=2024-12-31"
+curl -X GET "http://localhost:8001/accounts/DE89370400440532018001/payments?paymentType=SEPA&status=pending&fromDate=2024-01-01&toDate=2024-12-31"
