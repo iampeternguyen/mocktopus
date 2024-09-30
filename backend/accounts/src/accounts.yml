@@ -1,0 +1,246 @@
+openapi: 3.0.0
+info:
+  title: Accounts API
+  description: API to manage user accounts.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+paths:
+  /accounts:
+    post:
+      summary: Create a new account
+      description: Create a new account with the provided details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Name of the account holder.
+                  example: "John Doe"
+                iban:
+                  type: string
+                  description: IBAN of the account.
+                  example: "DE89370400440532013000"
+                balance:
+                  type: number
+                  format: float
+                  description: Initial balance of the account.
+                  example: 1000.50
+                currency:
+                  type: string
+                  description: Currency code.
+                  example: "EUR"
+      responses:
+        '201':
+          description: Account successfully created.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accountId:
+                    type: string
+                    description: Unique identifier for the account.
+                    example: "uuid-1234-5678-9101"
+                  name:
+                    type: string
+                    description: Name of the account holder.
+                    example: "John Doe"
+                  iban:
+                    type: string
+                    description: IBAN of the account.
+                    example: "DE89370400440532013000"
+                  balance:
+                    type: number
+                    format: float
+                    description: Balance of the account.
+                    example: 1000.50
+                  currency:
+                    type: string
+                    description: Currency code.
+                    example: "EUR"
+                  createdAt:
+                    type: string
+                    format: date-time
+                    description: Timestamp when the account was created.
+                    example: "2024-09-30T12:34:56Z"
+        '400':
+          description: Invalid input data.
+
+    get:
+      summary: Get all accounts
+      description: Retrieve a list of all accounts.
+      responses:
+        '200':
+          description: List of accounts retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    accountId:
+                      type: string
+                      description: Unique identifier for the account.
+                      example: "uuid-1234-5678-9101"
+                    name:
+                      type: string
+                      description: Name of the account holder.
+                      example: "John Doe"
+                    iban:
+                      type: string
+                      description: IBAN of the account.
+                      example: "DE89370400440532013000"
+                    balance:
+                      type: number
+                      format: float
+                      description: Balance of the account.
+                      example: 1000.50
+                    currency:
+                      type: string
+                      description: Currency code.
+                      example: "EUR"
+                    createdAt:
+                      type: string
+                      format: date-time
+                      description: Timestamp when the account was created.
+                      example: "2024-09-30T12:34:56Z"
+
+  /accounts/{accountId}:
+    get:
+      summary: Get an account by ID
+      description: Retrieve the details of a specific account by its ID.
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          description: Unique identifier of the account.
+          schema:
+            type: string
+            example: "uuid-1234-5678-9101"
+      responses:
+        '200':
+          description: Account details retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accountId:
+                    type: string
+                    description: Unique identifier for the account.
+                    example: "uuid-1234-5678-9101"
+                  name:
+                    type: string
+                    description: Name of the account holder.
+                    example: "John Doe"
+                  iban:
+                    type: string
+                    description: IBAN of the account.
+                    example: "DE89370400440532013000"
+                  balance:
+                    type: number
+                    format: float
+                    description: Balance of the account.
+                    example: 1000.50
+                  currency:
+                    type: string
+                    description: Currency code.
+                    example: "EUR"
+                  createdAt:
+                    type: string
+                    format: date-time
+                    description: Timestamp when the account was created.
+                    example: "2024-09-30T12:34:56Z"
+        '404':
+          description: Account not found.
+
+    put:
+      summary: Update an account
+      description: Update the details of an existing account.
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          description: Unique identifier of the account.
+          schema:
+            type: string
+            example: "uuid-1234-5678-9101"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Name of the account holder.
+                  example: "Jane Doe"
+                iban:
+                  type: string
+                  description: IBAN of the account.
+                  example: "DE89370400440532013000"
+                balance:
+                  type: number
+                  format: float
+                  description: New balance of the account.
+                  example: 1500.75
+                currency:
+                  type: string
+                  description: Currency code.
+                  example: "EUR"
+      responses:
+        '200':
+          description: Account updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accountId:
+                    type: string
+                    description: Unique identifier for the account.
+                    example: "uuid-1234-5678-9101"
+                  name:
+                    type: string
+                    description: Name of the account holder.
+                    example: "Jane Doe"
+                  iban:
+                    type: string
+                    description: IBAN of the account.
+                    example: "DE89370400440532013000"
+                  balance:
+                    type: number
+                    format: float
+                    description: Updated balance of the account.
+                    example: 1500.75
+                  currency:
+                    type: string
+                    description: Currency code.
+                    example: "EUR"
+        '404':
+          description: Account not found.
+
+    delete:
+      summary: Delete an account
+      description: Delete an existing account by its ID.
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          description: Unique identifier of the account.
+          schema:
+            type: string
+            example: "uuid-1234-5678-9101"
+      responses:
+        '204':
+          description: Account deleted successfully.
+        '404':
+          description: Account not found.
