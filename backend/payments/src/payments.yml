@@ -89,61 +89,6 @@ paths:
         '500':
           description: Server error
 
-  /payments/{paymentId}:
-    get:
-      summary: Get payment status
-      description: Retrieve the status of a specific payment.
-      tags:
-        - Payments
-      parameters:
-        - name: paymentId
-          in: path
-          required: true
-          description: The ID of the payment transaction
-          schema:
-            type: string
-            example: "pay_123456789"
-      responses:
-        '200':
-          description: Payment status retrieved successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  paymentId:
-                    type: string
-                    description: Unique identifier for the payment
-                    example: "pay_123456789"
-                  status:
-                    type: string
-                    description: Status of the payment
-                    example: "completed"
-                  paymentType:
-                    type: string
-                    description: Type of the payment (SEPA, SWIFT)
-                    example: "SEPA"
-                  creditorAccount:
-                    type: string
-                    example: "DE89370400440532013000"
-                  debtorAccount:
-                    type: string
-                    example: "GB33BUKB20201555555555"
-                  amount:
-                    type: number
-                    example: 1000.50
-                  currency:
-                    type: string
-                    example: "EUR"
-                  paymentReference:
-                    type: string
-                    example: "Invoice #2024-0023"
-        '404':
-          description: Payment not found
-        '500':
-          description: Server error
-
-  /payments:
     get:
       summary: List all payments
       description: Retrieve a list of all payments, optionally filtered by status, type, or date.
@@ -215,6 +160,60 @@ paths:
                     paymentReference:
                       type: string
                       example: "Invoice #2024-0023"
+        '500':
+          description: Server error
+
+  /payments/{paymentId}:
+    get:
+      summary: Get payment status
+      description: Retrieve the status of a specific payment.
+      tags:
+        - Payments
+      parameters:
+        - name: paymentId
+          in: path
+          required: true
+          description: The ID of the payment transaction
+          schema:
+            type: string
+            example: "pay_123456789"
+      responses:
+        '200':
+          description: Payment status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  paymentId:
+                    type: string
+                    description: Unique identifier for the payment
+                    example: "pay_123456789"
+                  status:
+                    type: string
+                    description: Status of the payment
+                    example: "completed"
+                  paymentType:
+                    type: string
+                    description: Type of the payment (SEPA, SWIFT)
+                    example: "SEPA"
+                  creditorAccount:
+                    type: string
+                    example: "DE89370400440532013000"
+                  debtorAccount:
+                    type: string
+                    example: "GB33BUKB20201555555555"
+                  amount:
+                    type: number
+                    example: 1000.50
+                  currency:
+                    type: string
+                    example: "EUR"
+                  paymentReference:
+                    type: string
+                    example: "Invoice #2024-0023"
+        '404':
+          description: Payment not found
         '500':
           description: Server error
 
@@ -308,4 +307,4 @@ paths:
         '404':
           description: No payments found for the specified account
         '500':
-          description: Server error
+          description: Server
