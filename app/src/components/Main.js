@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import mascot from "../assets/mascot.webp";
 import { apiEndpoints } from "../assets/apiEndpoints";
+import { getService } from "../utils/getService";
 
 const API_REQUEST = `http://localhost:8004`;
 
@@ -81,6 +82,7 @@ const Main = () => {
       if (payload && payload !== "null") {
         options.body = payload;
       }
+
       const response = await fetch(API_REQUEST + url, options);
 
       const contentType = response.headers.get("Content-Type");
@@ -105,7 +107,7 @@ const Main = () => {
   const handleSetRequest = (endpointId) => {
     const option = apiEndpoints.find((endpoint) => endpoint.id == endpointId);
     setEndpointId(endpointId);
-    setUrl(option.url);
+    setUrl(getService(endpointId) + option.url);
     setRequestMethod(option.requestType);
     setPayload(JSON.stringify(option.sampleRequestBody));
   };
