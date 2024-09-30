@@ -2,7 +2,6 @@ const express = require("express");
 const { faker } = require("@faker-js/faker"); // Correct import
 const app = express();
 const bodyParser = require('body-parser');
-var cors = require('cors');
 require("dotenv").config({ path: `${__dirname}/../../../.env` });
 
 // Middleware to parse JSON requests

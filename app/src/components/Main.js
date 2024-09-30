@@ -41,9 +41,14 @@ const Main = () => {
       console.log('Payload ', payload)
       const response = await fetch(API_REQUEST + url, options);
       const contentType = response.headers.get("Content-Type");
-      const mockHeader = response.headers.get("x-mocks");
+      const mockHeader = response.headers.get("X-Mocks");
+      console.log('header', response.headers)
 
-      setServerMode(mockHeader ? "Running on mocks" : "Running on real server");
+
+      response.headers.forEach((value,name) => console.log(value, name))
+
+      setServerMode(mockHeader === 
+        "true" ? "Running on mocks" : "Running on real server");
 
       if (contentType && contentType.includes("application/json")) {
         const data = await response.json();
