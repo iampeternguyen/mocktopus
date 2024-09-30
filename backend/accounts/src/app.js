@@ -5,25 +5,22 @@ const { faker } = require("@faker-js/faker");
 const dotenv = require("dotenv");
 
 // Load environment variables
-require("dotenv").config({path: `${__dirname}/../../../.env`});
+require("dotenv").config({ path: `${__dirname}/../../../.env` });
 
 const app = express();
 const PORT = process.env.ACCOUNTS_API_PORT || 3000;
 
 // Middleware to parse JSON requests
-app.use(
-  (req, res, next) => {
-    console.log("middleware running");
-    res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PUT, DELETE, OPTIONS"
-    ); // Allow specific methods
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
-    next();
-  },
-  express.json()
-);
+app.use((req, res, next) => {
+  console.log("middleware running");
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  ); // Allow specific methods
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+  next();
+}, express.json());
 
 // In-memory accounts storage
 let accounts = [];
@@ -55,6 +52,12 @@ const generateRandomAccounts = (num = 10) => {
 // Generate initial random accounts
 generateRandomAccounts(20);
 
+// Middleware to simulate an error response for demonstration
+const simulateError = (req, res, next) => {
+  // Uncomment the next line to simulate an error response
+  return res.status(500).json({ error: "Simulated server error." });
+};
+
 // Route to create a new account
 app.post("/accounts", (req, res) => {
   const { name, iban, balance, currency } = req.body;
@@ -79,7 +82,7 @@ app.post("/accounts", (req, res) => {
 });
 
 // Route to get all accounts
-app.get("/accounts", (req, res) => {
+app.get("/accounts", simulateError, (req, res) => {
   res.status(200).json(accounts);
 });
 

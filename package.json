@@ -2,18 +2,20 @@
     "name": "mocktopus-monorepo",
     "version": "1.0.0",
     "scripts": {
-        "start": "concurrently --names \"frontend,payments,accounts,foreignexchange,gateway\" \"npm run start --prefix app\" \"npm run start --prefix backend/payments\"  \"npm run start --prefix backend/accounts\" \"npm run start --prefix backend/foreignexchange\" \"npm run start --prefix backend/gateway\""
+        "start": "concurrently --names \"frontend,payments,accounts,foreignexchange,gateway,mock\" \"npm run start --prefix app\" \"npm run start --prefix backend/payments\"  \"npm run start --prefix backend/accounts\" \"npm run start --prefix backend/foreignexchange\" \"npm run start --prefix backend/gateway\"  \"npm run start --prefix backend/mock\""
     },
     "workspaces": [
         "backend/payments",
         "backend/accounts",
         "backend/foreignexchange",
         "backend/gateway",
+        "backend/mock",
         "app/"
     ],
     "dependencies": {
         "express": "^4.21.0",
-        "faker": "^6.6.6"
+        "faker": "^6.6.6",
+        "openai": "^4.66.1"
     },
     "devDependencies": {
         "concurrently": "^9.0.1"

@@ -9,7 +9,7 @@ require('dotenv').config({path: `${__dirname}/../../../.env`});
 const app = express();
 const PORT = process.env.EXCHANGE_API_PORT || 3000;
 
-const swaggerFile = fs.readFileSync('src/exchange.yml', 'utf-8');
+const swaggerFile = fs.readFileSync('../swagger/exchange.yml', 'utf-8');
 
 // Middleware to parse JSON requests
 app.use(
