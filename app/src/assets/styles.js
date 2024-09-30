@@ -16,7 +16,7 @@ export const styles = {
     leftSide: {
         flex: 1,
         display: "flex",
-        paddingTop: "50px",
+        paddingTop: "20px",
         flexDirection: "column",
         alignItems: "center",
         backgroundColor: "#f0f0f0",
@@ -27,7 +27,7 @@ export const styles = {
     rightSide: {
         flex: 1,
         display: "flex",
-        paddingTop: "50px",
+        paddingTop: "20px",
         flexDirection: "column",
         alignItems: "center",
         backgroundColor: "#ffffff",

@@ -142,7 +142,7 @@ const Main = () => {
                 rows={15}
                 cols={50}
                 readOnly
-              />ß
+              />
             </>
           )}
         </div>
