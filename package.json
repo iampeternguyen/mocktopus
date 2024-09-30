@@ -2,10 +2,11 @@
     "name": "mocktopus-monorepo",
     "version": "1.0.0",
     "scripts": {
-        "start": "concurrently \"npm run start --prefix api\" \"npm run start --prefix app\""
+        "start": "concurrently --names \"frontend,payments,accounts\" \"npm run start --prefix app\" \"npm run start --prefix backend/payments\"  \"npm run start --prefix backend/accounts\""
     },
     "workspaces": [
-        "api/",
+        "backend/payments",
+        "backend/accounts",
         "app/"
     ],
     "dependencies": {

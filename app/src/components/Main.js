@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import mascot from "../assets/mascot.webp";
 import JSONTextArea from "./JsonInput";
 
-const API_REQUEST = `http://localhost:8000/chat`;
+const API_REQUEST = `http://localhost:8001/payments`;
 
 const Main = () => {
   const [isOn, setIsOn] = useState(false);

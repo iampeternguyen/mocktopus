@@ -5,10 +5,10 @@ const { faker } = require("@faker-js/faker");
 const dotenv = require("dotenv");
 
 // Load environment variables
-dotenv.config();
+require("dotenv").config({path: `${__dirname}/../../../.env`});
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.ACCOUNTS_API_PORT || 3000;
 
 // Middleware to parse JSON requests
 app.use(express.json());
