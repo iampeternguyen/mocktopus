@@ -120,10 +120,10 @@ const Main = () => {
             onChange={(e) => setUrl(e.target.value)}
           ></input>
           <textarea
-            value={payload}
+            value={JSON.stringify(JSON.parse(payload || "{}"), null, 2)}
             onChange={(e) => setPayload(e.target.value)}
             placeholder="Enter payload JSON"
-            rows={5}
+            rows={10}
             cols={40}
           />
           <button style={styles.submitButton} type="submit">
@@ -142,7 +142,7 @@ const Main = () => {
                 rows={15}
                 cols={50}
                 readOnly
-              />
+              />ß
             </>
           )}
         </div>
