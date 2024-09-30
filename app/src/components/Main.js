@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import mascot from "../assets/mascot.webp";
-import JSONTextArea from "./JsonInput";
 
 const API_REQUEST = `http://localhost:8001/payments`;
 
 const Main = () => {
-  const [isOn, setIsOn] = useState(false);
+  const [url, setUrl] = useState(API_REQUEST);
 
-  const toggleSwitch = () => {
-    setIsOn(!isOn);
-  };
+  const [payload, setPayload] = useState("{}");
+
+  const [responseFromServer, setResponseFromServer] = useState("");
 
   const styles = {
     container: {
@@ -20,100 +19,125 @@ const Main = () => {
       height: "100vh",
       width: "100vw",
     },
-    side: (isActive) => ({
-      flex: 1,
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: isActive ? "#000" : "#ccc",
-      color: "#fff",
-      fontSize: "2rem",
-      height: "100%",
-      transition: "background-color 0.5s ease",
-    }),
-    switchContainer: {
-      display: "flex",
-      justifyContent: "center",
-      margin: "20px",
-    },
-    switch: {
-      position: "relative",
-      display: "inline-block",
-      width: "40px",
-      height: "20px",
-    },
-    input: {
-      opacity: 0,
-      width: 0,
-      height: 0,
-    },
     imgHeader: {
       width: "150px",
       height: "150px",
+      marginBottom: "20px",
     },
-    slider: {
-      position: "absolute",
+    leftSide: {
+      flex: 1,
+      display: "flex",
+      paddingTop: "50px",
+      flexDirection: "column",
+      alignItems: "center",
+      backgroundColor: "#f0f0f0",
+      gap: "20px",
+      height: "100vh",
+      width: "100vw",
+    },
+    rightSide: {
+      flex: 1,
+      display: "flex",
+      paddingTop: "50px",
+      flexDirection: "column",
+      alignItems: "center",
+      backgroundColor: "#ffffff",
+      gap: "20px",
+      height: "100vh",
+      width: "100vw",
+    },
+    submitButton: {
+      padding: "10px 20px",
+      fontSize: "16px",
+      backgroundColor: "transparent",
+      color: "#333",
+      border: "1px solid #333",
+      borderRadius: "4px",
       cursor: "pointer",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: isOn ? "#2196F3" : "#ccc",
-      transition: "0.4s",
-      borderRadius: "20px",
-    },
-    sliderBefore: {
-      position: "absolute",
-      content: '""',
-      height: "16px",
-      width: "16px",
-      left: isOn ? "20px" : "2px",
-      bottom: "2px",
-      backgroundColor: "white",
-      transition: "0.4s",
-      borderRadius: "50%",
+      transition: "background-color 0.3s, color 0.3s",
     },
   };
 
-  const onSubmit = async () => {
-    console.log("submitted");
-    const response = await fetch(API_REQUEST, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        message: "hello chat gpt",
-      }),
-    });
-    console.log(await response.json());
+  // const onSubmit = async () => {
+  //   console.log("submitted");
+  //   const response = await fetch(API_REQUEST, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       message: "hello chat gpt",
+  //     }),
+  //   });
+  //   console.log(await response.json());
+
+  // }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent form submission from reloading the page
+
+    if (!url || !payload) {
+      alert("Please enter both a URL and a payload.");
+      return;
+    }
+
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: payload, // Assuming payload is a valid JSON string
+      });
+
+      const contentType = response.headers.get("Content-Type");
+
+      if (contentType && contentType.includes("application/json")) {
+        const data = await response.json();
+        setResponseFromServer(JSON.stringify(data, null, 2));
+        console.log("DATA", data)
+      } else {
+        const errorText = await response.text();
+        console.log("Err", errorText)
+        setResponseFromServer(`Error: Server did not return JSON. Response: ${errorText}`);
+      }
+    } catch (error) {
+      console.error("Error fetching response:", error);
+      setResponseFromServer("Error fetching response: " + error.message);
+    }
   };
 
   return (
     <>
-      <h1>Mocktopus</h1>
-      <img style={styles.imgHeader} src={mascot} alt="Moctopus mascot" />
-      <div style={styles.switchContainer}>
-        <label style={styles.switch}>
-          <input
-            type="checkbox"
-            style={styles.input}
-            checked={isOn}
-            onChange={toggleSwitch}
-          />
-          <span style={styles.slider}>
-            <span style={styles.sliderBefore}></span>
-          </span>
-        </label>
-      </div>
+      <header>
+        <h1> Mocktopus </h1>
+        <img style={styles.imgHeader} src={mascot} alt="Moctopus mascot" />
+      </header>
       <div style={styles.container}>
-        <div style={styles.side(!isOn)}>
-          <JSONTextArea />
-          <button type="submit" onClick={onSubmit}>
-            submit{" "}
+        <form onSubmit={handleSubmit} style={styles.leftSide}>
+          <h3>Send Request</h3>
+          <textarea
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            placeholder="Enter backend URL"
+            rows={2}
+            cols={40}
+          />
+          <textarea
+            value={payload}
+            onChange={(e) => setPayload(e.target.value)}
+            placeholder="Enter payload JSON"
+            rows={5}
+            cols={40}
+          />
+          <button style={styles.submitButton} type="submit">
+            Submit
           </button>
+        </form>
+        <div style={styles.rightSide}>
+          <h3>Response from Server</h3>
+          <textarea value={responseFromServer} rows={10} cols={50} readOnly />
         </div>
-        <div style={styles.side(isOn)}>Generated AI Mock Server</div>
       </div>
     </>
   );

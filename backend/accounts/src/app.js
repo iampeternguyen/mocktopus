@@ -11,7 +11,19 @@ const app = express();
 const PORT = process.env.ACCOUNTS_API_PORT || 3000;
 
 // Middleware to parse JSON requests
-app.use(express.json());
+app.use(
+  (req, res, next) => {
+    console.log("middleware running");
+    res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PUT, DELETE, OPTIONS"
+    ); // Allow specific methods
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+    next();
+  },
+  express.json()
+);
 
 // In-memory accounts storage
 let accounts = [];
