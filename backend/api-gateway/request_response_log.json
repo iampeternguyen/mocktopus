@@ -540,5 +540,437 @@
     "request": {},
     "response": "POST,GET,HEAD",
     "timestamp": "2024-09-30T18:55:00.590Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-09-30T19:06:51.722Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-09-30T19:09:23.943Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-09-30T19:11:33.066Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-09-30T19:16:16.921Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-09-30T19:17:16.800Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-09-30T19:27:27.539Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_31d57b9d-23f0-4e9f-9be4-bab0cbd58f45",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "153.66",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4284",
+        "executionDate": "2024-09-03"
+      },
+      {
+        "paymentId": "pay_e783fd50-773f-4448-9e63-aeb890a49915",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "827.28",
+        "currency": "USD",
+        "paymentReference": "Invoice #4396",
+        "executionDate": "2023-04-28"
+      },
+      {
+        "paymentId": "pay_eac904ac-380e-41c3-8ecf-a15c3fc34104",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "822.10",
+        "currency": "EUR",
+        "paymentReference": "Invoice #1967",
+        "executionDate": "2024-11-12"
+      },
+      {
+        "paymentId": "pay_2da756e8-ce8f-45fb-b60a-dc3f6e4ea3e0",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "126.47",
+        "currency": "GBP",
+        "paymentReference": "Invoice #4122",
+        "executionDate": "2024-09-02"
+      },
+      {
+        "paymentId": "pay_7ad0892b-21bc-48fe-86d2-75f867a740fd",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "846.54",
+        "currency": "GBP",
+        "paymentReference": "Invoice #4130",
+        "executionDate": "2024-10-29"
+      },
+      {
+        "paymentId": "pay_170232ad-3b27-492f-93a9-04028be65f3d",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "518.16",
+        "currency": "USD",
+        "paymentReference": "Invoice #5582",
+        "executionDate": "2023-10-08"
+      },
+      {
+        "paymentId": "pay_74f17d9f-deac-444b-8857-f8dc7856da61",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "673.81",
+        "currency": "USD",
+        "paymentReference": "Invoice #2801",
+        "executionDate": "2023-04-13"
+      },
+      {
+        "paymentId": "pay_23ca9f59-dfe3-4c0a-8ad8-f3d4c7f3078d",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "348.19",
+        "currency": "EUR",
+        "paymentReference": "Invoice #3364",
+        "executionDate": "2024-07-06"
+      },
+      {
+        "paymentId": "pay_1f927397-1d20-444b-ad18-cb7d9f110462",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "819.66",
+        "currency": "EUR",
+        "paymentReference": "Invoice #9898",
+        "executionDate": "2024-12-13"
+      },
+      {
+        "paymentId": "pay_4914ba14-8b95-47f7-bb8b-6b07403bea1c",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "150.57",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4032",
+        "executionDate": "2023-07-06"
+      }
+    ],
+    "timestamp": "2024-09-30T19:27:27.554Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_31d57b9d-23f0-4e9f-9be4-bab0cbd58f45",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "153.66",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4284",
+        "executionDate": "2024-09-03"
+      },
+      {
+        "paymentId": "pay_e783fd50-773f-4448-9e63-aeb890a49915",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "827.28",
+        "currency": "USD",
+        "paymentReference": "Invoice #4396",
+        "executionDate": "2023-04-28"
+      },
+      {
+        "paymentId": "pay_eac904ac-380e-41c3-8ecf-a15c3fc34104",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "822.10",
+        "currency": "EUR",
+        "paymentReference": "Invoice #1967",
+        "executionDate": "2024-11-12"
+      },
+      {
+        "paymentId": "pay_2da756e8-ce8f-45fb-b60a-dc3f6e4ea3e0",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "126.47",
+        "currency": "GBP",
+        "paymentReference": "Invoice #4122",
+        "executionDate": "2024-09-02"
+      },
+      {
+        "paymentId": "pay_7ad0892b-21bc-48fe-86d2-75f867a740fd",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "846.54",
+        "currency": "GBP",
+        "paymentReference": "Invoice #4130",
+        "executionDate": "2024-10-29"
+      },
+      {
+        "paymentId": "pay_170232ad-3b27-492f-93a9-04028be65f3d",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "518.16",
+        "currency": "USD",
+        "paymentReference": "Invoice #5582",
+        "executionDate": "2023-10-08"
+      },
+      {
+        "paymentId": "pay_74f17d9f-deac-444b-8857-f8dc7856da61",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "673.81",
+        "currency": "USD",
+        "paymentReference": "Invoice #2801",
+        "executionDate": "2023-04-13"
+      },
+      {
+        "paymentId": "pay_23ca9f59-dfe3-4c0a-8ad8-f3d4c7f3078d",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "348.19",
+        "currency": "EUR",
+        "paymentReference": "Invoice #3364",
+        "executionDate": "2024-07-06"
+      },
+      {
+        "paymentId": "pay_1f927397-1d20-444b-ad18-cb7d9f110462",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "819.66",
+        "currency": "EUR",
+        "paymentReference": "Invoice #9898",
+        "executionDate": "2024-12-13"
+      },
+      {
+        "paymentId": "pay_4914ba14-8b95-47f7-bb8b-6b07403bea1c",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "150.57",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4032",
+        "executionDate": "2023-07-06"
+      }
+    ],
+    "timestamp": "2024-09-30T19:27:31.310Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T20:53:55.172Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T20:55:26.703Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T20:56:18.127Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T20:57:34.775Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T21:00:17.795Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T21:04:59.778Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T21:05:47.957Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T21:06:46.509Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T21:09:50.231Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T21:10:51.761Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "timestamp": "2024-09-30T21:11:30.819Z"
   }
 ]

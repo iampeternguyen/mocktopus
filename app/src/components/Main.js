@@ -40,7 +40,7 @@ const Main = () => {
       if (payload && payload !== "null") {
         options.body = payload;
       }
-
+      console.log('Payload ', payload)
       const response = await fetch(API_REQUEST + url, options);
 
       const contentType = response.headers.get("Content-Type");

@@ -1,22 +1,13 @@
 const express = require("express");
 const { faker } = require("@faker-js/faker"); // Correct import
 const app = express();
+const bodyParser = require('body-parser');
+var cors = require('cors');
 require("dotenv").config({ path: `${__dirname}/../../../.env` });
 
 // Middleware to parse JSON requests
-app.use(
-  (req, res, next) => {
-    console.log("middleware running");
-    res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PUT, DELETE, OPTIONS"
-    ); // Allow specific methods
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
-    next();
-  },
-  express.json()
-);
+app.use(cors());
+app.use(bodyParser.json());
 
 const ibanList = [
   "DE89370400440532013000",
@@ -56,6 +47,7 @@ let payments = Array.from({ length: 10 }, () => ({
 
 // POST /payments - Create a new payment
 app.post("/payments", (req, res) => {
+  console.log('Request in payments ', req.body)
   const {
     paymentType,
     creditorName,
@@ -79,6 +71,7 @@ app.post("/payments", (req, res) => {
     !currency ||
     !paymentReference
   ) {
+   
     return res.status(400).json({ error: "Invalid input data" });
   }
 
@@ -96,7 +89,6 @@ app.post("/payments", (req, res) => {
   };
 
   payments.push(newPayment);
-
   res.status(201).json({
     paymentId: newPayment.paymentId,
     status: newPayment.status,
