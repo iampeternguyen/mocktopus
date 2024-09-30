@@ -3,6 +3,7 @@ import mascot from "../assets/mascot.webp";
 import { apiEndpoints } from "../assets/apiEndpoints";
 import { getService } from "../utils/getService";
 import { styles } from "../assets/styles";
+import { checkJsonInput } from "../assets/utils";
 
 const API_REQUEST = `http://localhost:8004`;
 
@@ -120,7 +121,7 @@ const Main = () => {
             onChange={(e) => setUrl(e.target.value)}
           ></input>
           <textarea
-            value={JSON.stringify(JSON.parse(payload || "{}"), null, 2)}
+            value={checkJsonInput(payload)}
             onChange={(e) => setPayload(e.target.value)}
             placeholder="Enter payload JSON"
             rows={10}
