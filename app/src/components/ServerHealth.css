@@ -1,0 +1,24 @@
+.indicator {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px;
+}
+.name {
+  color: white;
+}
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .healthy {
+    background-color: green;
+  }
+  
+  .unhealthy {
+    background-color: red;
+  }
+  

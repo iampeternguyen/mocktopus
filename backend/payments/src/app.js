@@ -6,8 +6,15 @@ var cors = require('cors');
 require("dotenv").config({ path: `${__dirname}/../../../.env` });
 
 // Middleware to parse JSON requests
-app.use(cors());
-app.use(bodyParser.json());
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  ); // Allow specific methods
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+  next();
+}, express.json());
 
 const ibanList = [
   "DE89370400440532013000",
@@ -176,6 +183,23 @@ app.get("/payments/accounts/:iban", (req, res) => {
 
 // Start the server
 const PORT = process.env.PAYMENTS_API_PORT || 3000;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Payments API server is running on port ${PORT}`);
+});
+
+// Endpoint to stop the server
+app.get("/shutdown", (req, res) => {
+  if (server) {
+    server.close(() => {
+      console.log("Server has been shut down.");
+      res.send("Server is shutting down...");
+    });
+  } else {
+    res.send("Server is not running.");
+  }
+});
+
+// Optionally add a health check endpoint
+app.get("/health", (req, res) => {
+  res.send("Server is healthy.");
 });
