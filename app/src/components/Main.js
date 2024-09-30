@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import mascot from "../assets/mascot.webp";
+import { apiEndpoints } from "../assets/apiEndpoints"
 
-const API_REQUEST = `http://localhost:8001/payments`;
+const API_REQUEST = `http://localhost:8001`;
 
 const Main = () => {
   const [url, setUrl] = useState(API_REQUEST);
 
   const [payload, setPayload] = useState("{}");
+
+  const [requestMethod, setRequestMethod] = useState()
 
   const [responseFromServer, setResponseFromServer] = useState("");
 
@@ -58,21 +61,6 @@ const Main = () => {
     },
   };
 
-  // const onSubmit = async () => {
-  //   console.log("submitted");
-  //   const response = await fetch(API_REQUEST, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       message: "hello chat gpt",
-  //     }),
-  //   });
-  //   console.log(await response.json());
-
-  // }
-
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form submission from reloading the page
 
@@ -83,7 +71,7 @@ const Main = () => {
 
     try {
       const response = await fetch(url, {
-        method: "POST",
+        method: requestMethod,
         headers: {
           "Content-Type": "application/json",
         },
@@ -107,6 +95,14 @@ const Main = () => {
     }
   };
 
+  const handleSetRequest = (option) => {
+    console.log("IS it running?")
+    setUrl(option);
+    setRequestMethod(option.requestType)
+    setPayload(option.sampleRequestBody)
+  }
+
+
   return (
     <>
       <header>
@@ -116,13 +112,21 @@ const Main = () => {
       <div style={styles.container}>
         <form onSubmit={handleSubmit} style={styles.leftSide}>
           <h3>Send Request</h3>
-          <textarea
+
+          {/* Dropdown for selecting URL */}
+          <label htmlFor="url-select">Select a URL:</label>
+          <select
+            id="url-select"
             value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            placeholder="Enter backend URL"
-            rows={2}
-            cols={40}
-          />
+            onChange={(e) => handleSetRequest(e.target.value)}
+          >
+            <option value="" disabled>Select a URL</option>
+            {apiEndpoints.map((option, index) => (
+              <option key={index} value={option.url}>
+                {option.requestType} {option.url}
+              </option>
+            ))}
+          </select>
           <textarea
             value={payload}
             onChange={(e) => setPayload(e.target.value)}
