@@ -58,7 +58,20 @@ const proxyMiddleware = (req, res, next) => {
   return proxy(req, res, next);
 };
 
-// Apply proxy middleware for all routes
+// Middleware to parse JSON requests
+app.use(
+  (req, res, next) => {
+    console.log("middleware running");
+    res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PUT, DELETE, OPTIONS"
+    ); // Allow specific methods
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+    next();
+  },
+  express.json()
+);
 app.use('/', proxyMiddleware);
 
 // Start the server

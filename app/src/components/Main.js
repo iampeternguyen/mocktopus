@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import mascot from "../assets/mascot.webp";
 import { apiEndpoints } from "../assets/apiEndpoints";
 
-const API_REQUEST = `http://localhost:8001`;
+const API_REQUEST = `http://localhost:8999`;
 
 const Main = () => {
   const [endpointId, setEndpointId] = useState(0);
