@@ -74,7 +74,6 @@ async function getChatGptResponse(url,method,logData) {
 }
 app.use(
     (req, res, next) => {
-      console.log("middleware running");
       res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
       res.setHeader(
         "Access-Control-Allow-Methods",

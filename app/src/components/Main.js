@@ -4,6 +4,7 @@ import { apiEndpoints } from "../assets/apiEndpoints";
 import { getService } from "../utils/getService";
 import { styles } from "../assets/styles";
 import { checkJsonInput } from "../assets/utils";
+import ServerHealthComponent from "./ServerHealth";
 
 const API_REQUEST = `http://localhost:8004`;
 
@@ -47,10 +48,8 @@ const Main = () => {
       if (contentType && contentType.includes("application/json")) {
         const data = await response.json();
         setResponseFromServer(JSON.stringify(data, null, 2));
-        console.log("DATA", data);
       } else {
         const errorText = await response.text();
-        console.log("Err", errorText);
         setResponseFromServer(`Error: Server did not return JSON. Response: ${errorText}`);
       }
     } catch (error) {
@@ -74,6 +73,7 @@ const Main = () => {
       <header style={styles.header}>
         <img style={styles.imgHeader} src={mascot} alt="Mocktopus mascot" />
         <h1 style={styles.title}>Mocktopus</h1>
+        <ServerHealthComponent name="payments" path={API_REQUEST + '/payments-services'}/>
       </header>
 
       <div style={styles.container}>
