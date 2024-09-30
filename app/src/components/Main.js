@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import mascot from "../assets/mascot.webp";
 import JSONTextArea from "./JsonInput";
 
+const API_REQUEST = `http://localhost:8000/chat`;
+
 const Main = () => {
   const [isOn, setIsOn] = useState(false);
 
@@ -75,7 +77,7 @@ const Main = () => {
 
   const onSubmit = async () => {
     console.log("submitted");
-    const response = await fetch("http://localhost:3000/chat?somequery=hi", {
+    const response = await fetch(API_REQUEST, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
