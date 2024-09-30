@@ -136,6 +136,18 @@ const Main = () => {
               </option>
             ))}
           </select>
+          <input
+            type="text"
+            placeholder="request type"
+            value={requestMethod}
+            onChange={(e) => setRequestMethod(e.target.value)}
+          ></input>
+          <input
+            type="text"
+            placeholder="url"
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+          ></input>
           <textarea
             value={payload}
             onChange={(e) => setPayload(e.target.value)}
