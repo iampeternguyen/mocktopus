@@ -3,7 +3,7 @@
 const express = require('express');
 const axios = require('axios');
 const fs = require('fs');
-require('dotenv').config();
+require('dotenv').config({path: `${__dirname}/../../../.env`});
 
 
 const app = express();
@@ -12,12 +12,23 @@ const PORT = process.env.EXCHANGE_API_PORT || 3000;
 const swaggerFile = fs.readFileSync('src/exchange.yml', 'utf-8');
 
 // Middleware to parse JSON requests
-app.use(express.json());
+app.use(
+  (req, res, next) => {
+    console.log("middleware running");
+    res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PUT, DELETE, OPTIONS"
+    ); // Allow specific methods
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+    next();
+  },
+  express.json()
+);
 
 // ChatGPT endpoint
 app.all('/*', async (req, res) => {
   const { method, body } = req;
-  console.log('Request recevied for '+req.url)
   try {
     const response = await axios.post('https://api.openai.com/v1/chat/completions', {
       model: 'gpt-3.5-turbo', // or 'gpt-4' if you have access
