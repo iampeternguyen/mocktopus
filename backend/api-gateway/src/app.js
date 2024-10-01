@@ -150,9 +150,9 @@ app.use(async (req, res, next) => {
       res.send("Done");
       return;
     }
-    var serviceUrlWithPath = req.path.split("/")[2];
+    var serviceUrlpath = req.path.split("/")[2];
 
-    var respondData = await handleRequest(serviceUrlWithPath, req.method);
+    var respondData = await handleRequest(serviceUrlpath, req.method);
     console.log("Response from swagger ", respondData);
     if (respondData) {
       console.log("Response found");
@@ -163,10 +163,9 @@ app.use(async (req, res, next) => {
   }
 
   const service = servicesConfig[servicePath];
+    const serviceUrlWithPath = `${service.url}/${req.path.split("/")[2]}`;
 
   if (service.isHealthy) {
-    // Log the incoming request
-    var serviceUrlWithPath = `${service.url}/${req.path.split("/")[2]}`;
 
     // Call the external service
     const externalResponse = await callExternalService(
@@ -230,10 +229,11 @@ app.use(async (req, res, next) => {
       res.send("Done");
       return;
     }
-    const aiResponse = await getChatGptResponse(
-      serviceUrlWithPath,
-      req.method,
-      requestResponseLog
+
+    console.log('service url path', '/' + serviceUrlWithPath.split("/").slice(3).join("/"));
+    const aiResponse = await handleRequest(
+      '/' + serviceUrlWithPath.split("/").slice(3).join("/"),
+      req.method
     );
 
     if (aiResponse) {
@@ -350,7 +350,7 @@ async function generateChatGPTResponse(schema) {
     schema,
     null,
     2
-  )}`;
+  )} do not include any additional text as content. only return valid json or empty {}`;
 
   try {
     const response = await axios.post(
@@ -377,6 +377,7 @@ async function generateChatGPTResponse(schema) {
       }
     );
 
+      console.log(response.data.choices[0].message.content)
     return JSON.parse(response.data.choices[0].message.content); // Parse and return the generated JSON response
   } catch (error) {
     console.error("Error calling ChatGPT API:", error);
