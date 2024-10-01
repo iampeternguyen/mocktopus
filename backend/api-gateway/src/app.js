@@ -87,7 +87,7 @@ async function getChatGptResponse(url, method, logData) {
     const response = await axios.post(
       chatGptAPIUrl,
       {
-        model: "gpt-3.5-turbo", // or whichever model you're using
+        model: "gpt-4",
         messages: [
           {
             role: "user",
