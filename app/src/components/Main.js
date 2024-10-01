@@ -45,9 +45,9 @@ const Main = () => {
       console.log('header', response.headers)
 
 
-      response.headers.forEach((value,name) => console.log(value, name))
+      response.headers.forEach((value, name) => console.log(value, name))
 
-      setServerMode(mockHeader === 
+      setServerMode(mockHeader ===
         "true" ? "Running on mocks" : "Running on real server");
 
       if (contentType && contentType.includes("application/json")) {
@@ -75,24 +75,25 @@ const Main = () => {
     setPayload(JSON.stringify(option.sampleRequestBody));
   };
 
+  const serverActions = [
+    { name: "payments", path: API_REQUEST + "/payments-services" },
+    { name: "accounts", path: API_REQUEST + "/accounts-services" }
+  ];
+
   return (
     <div style={styles.appContainer}>
       <header style={styles.header}>
         <img style={styles.imgHeader} src={mascot} alt="Mocktopus mascot" />
         <h1 style={styles.title}>Mocktopus</h1>
-        <div>
-          <ServerHealthComponent
-            name="payments"
-            path={API_REQUEST + "/payments-services"}
-          />
-          <ServerHealthComponent
-            name="accounts"
-            path={API_REQUEST + "/accounts-services"}
-          />
-        </div>
-      </header>
 
+      </header>
+      <div style={styles.topSection}>
+        <ServerHealthComponent
+          serverActions={serverActions}
+        />
+      </div>
       <div style={styles.container}>
+
         <form onSubmit={handleSubmit} style={styles.leftSide}>
           <h3>Send Request</h3>
 

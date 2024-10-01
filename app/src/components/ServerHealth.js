@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
-import PropTypes from "prop-types";
-import "./ServerHealth.css"; // Importing CSS for styles
+import "./ServerHealth.css";
 
-const ServerHealthComponent = ({ path, name }) => {
+const ServerHealthComponent = ({ serverActions }) => {
   const [isHealthy, setIsHealthy] = useState(true);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [, setError] = useState(null);
+  const [selectedServer, setSelectedServer] = useState();
 
   const checkServerHealth = useCallback(
     async (override = false) => {
@@ -13,10 +13,10 @@ const ServerHealthComponent = ({ path, name }) => {
         if (loading || (!isHealthy && override === false)) {
           return;
         }
-        setError(null);
         setLoading(true);
         // Simulate an API call to check health based on the provided path
-        const response = await fetch(`${path}/health`, { cache: "no-store" });
+        const response = await fetch(`${selectedServer}/health`, { cache: "no-store" });
+        setError(null);
         setIsHealthy((await response.json()) === "Server is healthy.");
       } catch (err) {
         setError("Failed to check server health.");
@@ -24,22 +24,22 @@ const ServerHealthComponent = ({ path, name }) => {
         setLoading(false);
       }
     },
-    [loading, isHealthy, path]
+    [loading, isHealthy, selectedServer]
   );
-  
+
   // Simulate health check
   useEffect(() => {
     const intervalId = setInterval(checkServerHealth, 1000);
 
     return () => clearInterval(intervalId);
-  }, [loading, isHealthy, path, checkServerHealth]);
+  }, [loading, isHealthy, serverActions, checkServerHealth]);
 
   const killServer = async () => {
     try {
       setLoading(true);
       // Simulate an API call to kill the server based on the provided path
       //
-      const response = await fetch(`${path}/shutdown`, { cache: "no-store" });
+      const response = await fetch(`${selectedServer}/shutdown`, { cache: "no-store" });
       console.log(response);
     } catch (err) {
       setError("Failed to kill the server.");
@@ -49,31 +49,32 @@ const ServerHealthComponent = ({ path, name }) => {
   };
 
   return (
-    <div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+    <div className="server-health-container">
+      <select
+        value={selectedServer}
+        onChange={(e) => setSelectedServer(e.target.value)}
+        className="endpoint-dropdown"
+      >
+        {serverActions.map((server) => (
+          <option key={server.path} value={server.path}>
+            {server.name}
+          </option>
+        ))}
+      </select>
       <div className="indicator">
-        <div className="name">{name}</div>
-        <div
-          className={`status-indicator ${isHealthy ? "healthy" : "unhealthy"}`}
-        ></div>
-        <button onClick={killServer} disabled={!isHealthy}>
-          Kill Server
+        <div className="name">
+          Server Status
+        </div>
+        <div className={`status-indicator ${isHealthy ? "healthy" : "unhealthy"}`}></div>
+        <button className="button" onClick={killServer}>
+          Switch to mock
         </button>
-
-        <button
-          onClick={() => checkServerHealth(true)}
-          disabled={isHealthy || loading}
-        >
+        <button className="button" onClick={() => checkServerHealth(true)}>
           Check Health
         </button>
       </div>
     </div>
   );
-};
-
-ServerHealthComponent.propTypes = {
-  path: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
 };
 
 export default ServerHealthComponent;
