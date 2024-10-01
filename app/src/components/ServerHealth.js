@@ -55,7 +55,7 @@ const ServerHealthComponent = ({ path, name }) => {
         <div
           className={`status-indicator ${isHealthy ? "healthy" : "unhealthy"}`}
         ></div>
-        <button onClick={killServer} disabled={!isHealthy || loading}>
+        <button onClick={killServer} disabled={!isHealthy}>
           Kill Server
         </button>
 
