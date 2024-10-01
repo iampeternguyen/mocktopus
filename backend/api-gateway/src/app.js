@@ -20,8 +20,8 @@ const servicesConfig = {
     isHealthy: true,
   },
   "/exchange-service": {
-    url: "http://localhost:8003", // URL for service 3
-    healthURL: "http://localhost:8003/health",
+    url: "http://localhost:8002", // URL for service 3
+    healthURL: "http://localhost:8002/health",
     isHealthy: true,
   },
 };
@@ -83,11 +83,14 @@ async function callExternalService(url, method, reqBody, headers) {
 
 // Function to get a response from ChatGPT based on the monitored data
 async function getChatGptResponse(url, method, logData) {
+  if (!url || !method) {
+    return null;
+  }
   try {
     const response = await axios.post(
       chatGptAPIUrl,
       {
-        model: "gpt-4",
+        model: "gpt-3.5-turbo", // or whichever model you're using
         messages: [
           {
             role: "user",
@@ -104,6 +107,7 @@ async function getChatGptResponse(url, method, logData) {
         },
       }
     );
+    console.log(response.data);
 
     return JSON.parse(response.data.choices[0].message.content); // Extract the content from the response
   } catch (error) {
