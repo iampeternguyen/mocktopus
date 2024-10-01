@@ -31,6 +31,7 @@ export const styles = {
     borderRadius: "10px", // Rounded corners for modern appeal
     padding: "20px", // Padding for inner spacing
     margin: "20px",
+    marginBottom: "0px"
   },
   leftSide: {
     flex: 1,

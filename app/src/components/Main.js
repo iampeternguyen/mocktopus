@@ -93,7 +93,6 @@ const Main = () => {
             <h3>Send Request</h3>
 
             {/* Dropdown for selecting URL */}
-            <label htmlFor="url-select">Select a URL:</label>
             <select
               id="url-select"
               value={endpointId}
@@ -127,8 +126,8 @@ const Main = () => {
             <textarea
               value={checkJsonInput(payload)}
               onChange={(e) => setPayload(e.target.value)}
-              placeholder="Enter Payload JSON"
-              rows={10}
+              placeholder="Payload JSON"
+              rows={8}
               style={styles.textArea}
             />
             <button style={styles.submitButton} type="submit">
