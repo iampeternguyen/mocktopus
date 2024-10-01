@@ -14,7 +14,6 @@ const Main = () => {
   const [payload, setPayload] = useState("");
   const [requestMethod, setRequestMethod] = useState("");
   const [responseFromServer, setResponseFromServer] = useState("");
-  const [serverMode, setServerMode] = useState("Server is running");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -41,14 +40,10 @@ const Main = () => {
       console.log('Payload ', payload)
       const response = await fetch(API_REQUEST + url, options);
       const contentType = response.headers.get("Content-Type");
-      const mockHeader = response.headers.get("X-Mocks");
+
       console.log('header', response.headers)
 
-
-      response.headers.forEach((value,name) => console.log(value, name))
-
-      setServerMode(mockHeader === 
-        "true" ? "Running on mocks" : "Running on real server");
+      response.headers.forEach((value, name) => console.log(value, name))
 
       if (contentType && contentType.includes("application/json")) {
         const data = await response.json();
@@ -74,13 +69,15 @@ const Main = () => {
     setRequestMethod(option.requestType);
     setPayload(JSON.stringify(option.sampleRequestBody));
   };
-
   return (
-    <div style={styles.appContainer}>
-      <header style={styles.header}>
-        <img style={styles.imgHeader} src={mascot} alt="Mocktopus mascot" />
-        <h1 style={styles.title}>Mocktopus</h1>
-        <div>
+    <>
+      <div style={styles.appContainer}>
+        <header style={styles.header}>
+          <img style={styles.imgHeader} src={mascot} alt="Mocktopus mascot" />
+          <h1 style={styles.title}>Mocktopus</h1>
+        </header>
+
+        <div style={styles.topSection}>
           <ServerHealthComponent
             name="payments"
             path={API_REQUEST + "/payments-services"}
@@ -90,73 +87,73 @@ const Main = () => {
             path={API_REQUEST + "/accounts-services"}
           />
         </div>
-      </header>
 
-      <div style={styles.container}>
-        <form onSubmit={handleSubmit} style={styles.leftSide}>
-          <h3>Send Request</h3>
+        <div style={styles.container}>
+          <form onSubmit={handleSubmit} style={styles.leftSide}>
+            <h3>Send Request</h3>
 
-          {/* Dropdown for selecting URL */}
-          <label htmlFor="url-select">Select a URL:</label>
-          <select
-            id="url-select"
-            value={endpointId}
-            onChange={(e) => handleSetRequest(e.target.value)}
-            style={styles.select}
-          >
-            <option value="0" disabled>
-              Select a URL
-            </option>
-            {apiEndpoints.map((option, index) => (
-              <option key={index} value={option.id}>
-                {option.requestType} {option.url}
+            {/* Dropdown for selecting URL */}
+            <label htmlFor="url-select">Select a URL:</label>
+            <select
+              id="url-select"
+              value={endpointId}
+              onChange={(e) => handleSetRequest(e.target.value)}
+              style={styles.select}
+            >
+              <option value="0" disabled>
+                Select a URL
               </option>
-            ))}
-          </select>
+              {apiEndpoints.map((option, index) => (
+                <option key={index} value={option.id}>
+                  {option.requestType} {option.url}
+                </option>
+              ))}
+            </select>
 
-          <input
-            type="text"
-            placeholder="Request Type"
-            value={requestMethod}
-            onChange={(e) => setRequestMethod(e.target.value)}
-            style={styles.input}
-          />
-          <input
-            type="text"
-            placeholder="URL"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            style={styles.input}
-          />
-          <textarea
-            value={checkJsonInput(payload)}
-            onChange={(e) => setPayload(e.target.value)}
-            placeholder="Enter Payload JSON"
-            rows={10}
-            style={styles.textArea}
-          />
-          <button style={styles.submitButton} type="submit">
-            Submit
-          </button>
-        </form>
+            <input
+              type="text"
+              placeholder="Request Type"
+              value={requestMethod}
+              onChange={(e) => setRequestMethod(e.target.value)}
+              style={styles.input}
+            />
+            <input
+              type="text"
+              placeholder="URL"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              style={styles.input}
+            />
+            <textarea
+              value={checkJsonInput(payload)}
+              onChange={(e) => setPayload(e.target.value)}
+              placeholder="Enter Payload JSON"
+              rows={10}
+              style={styles.textArea}
+            />
+            <button style={styles.submitButton} type="submit">
+              Submit
+            </button>
+          </form>
 
-        <div style={styles.rightSide}>
-          <h3>Response from Server</h3>
-          {loading ? (
-            <div style={styles.spinner} />
-          ) : (
-            <>
-              {serverMode && <p>{serverMode}</p>}
-              <textarea
-                value={responseFromServer}
-                rows={15}
-                style={styles.textArea}
-                readOnly
-              />
-            </>
-          )}
+          <div style={styles.rightSide}>
+            <h3>Response from Server</h3>
+            {loading ? (
+              <div style={styles.spinner} />
+            ) : (
+              <>
+                <textarea
+                  value={responseFromServer}
+                  rows={15}
+                  style={styles.textArea}
+                  readOnly
+                />
+              </>
+            )}
+          </div>
         </div>
       </div>
+
       <style>
         {`
           @keyframes spin {
@@ -165,7 +162,7 @@ const Main = () => {
           }
         `}
       </style>
-    </div>
+    </>
   );
 };
 

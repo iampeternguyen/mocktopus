@@ -1,24 +1,52 @@
+.server-health-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.endpoint-dropdown {
+  width: 200px;
+  padding: 5px;
+  margin-right: 20px;
+}
+
 .indicator {
   display: flex;
-  gap: 8px;
-  padding: 0 16px;
+  align-items: center;
 }
+
 .name {
-  color: white;
+  margin-right: 20px;
+  font-weight: bold;
 }
+
 .status-indicator {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .healthy {
-    background-color: green;
-  }
-  
-  .unhealthy {
-    background-color: red;
-  }
-  
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.healthy {
+  background-color: green;
+}
+
+.unhealthy {
+  background-color: red;
+}
+
+.button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: "#FF6200";
+
+  /* padding: "8px 16px", // Reduced padding
+  borderRadius: "4px", // Slightly smaller border radius
+  border: "none",
+  cursor: "pointer",
+  fontSize: "14px", // Reduced font size
+  transition: "background-color 0.3s", */
+}
