@@ -152,7 +152,7 @@ app.use(async (req, res, next) => {
     }
     var serviceUrlpath = req.path.split("/")[2] || req.path;
 
-    var respondData = await handleRequest(serviceUrlpath, req.method);
+    var respondData = await handleRequest(serviceUrlpath, req.method, req.body);
     console.log("Response from swagger ", respondData);
     if (respondData) {
       console.log("Response found");
@@ -342,12 +342,12 @@ function extractSchema(operation) {
 }
 
 // Function to call ChatGPT and generate response based on schema
-async function generateChatGPTResponse(schema) {
-  const prompt = `Generate a JSON response based on the following schema:\n\n${JSON.stringify(
+async function generateChatGPTResponse(path, schema, body) {
+  const prompt = `Generate only plain JSON response based on the following schema:\n\n${JSON.stringify(
     schema,
     null,
     2
-  )} do not include any additional text as content. only return valid json or empty {}`;
+  )} and path ${path} and body ${JSON.stringify(body)} do not include any additional text as content. only return valid json or empty {}. Don't use examples. Generate random responses. But for the same parrameters better to generate same response.`;
 
   try {
     const response = await axios.post(
@@ -382,7 +382,7 @@ async function generateChatGPTResponse(schema) {
   }
 }
 
-async function handleRequest(requestedPath, method) {
+async function handleRequest(requestedPath, method, body) {
   try {
     // Load all Swagger files into memory
     const swaggerDocs = await loadAllSwaggerFiles(swaggerDir);
@@ -409,7 +409,7 @@ async function handleRequest(requestedPath, method) {
       console.log("Extracted Schema:", JSON.stringify(schema, null, 2));
 
       // Call ChatGPT to generate a response based on the schema
-      const aiResponse = await generateChatGPTResponse(schema);
+      const aiResponse = await generateChatGPTResponse(requestedPath, schema, body);
       console.log(
         "Generated AI Response:",
         JSON.stringify(aiResponse, null, 2)
