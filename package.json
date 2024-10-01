@@ -1,21 +1,30 @@
 {
-    "name": "mocktopus-monorepo",
-    "version": "1.0.0",
-    "scripts": {
-        "start": "concurrently --names \"frontend,payments,accounts,gateway\" \"npm run start --prefix app\" \"npm run start --prefix backend/payments\"  \"npm run start --prefix backend/accounts\" \"npm run start --prefix backend/api-gateway\""
-    },
-    "workspaces": [
-        "backend/payments",
-        "backend/accounts",
-        "backend/foreignexchange",
-        "backend/api-gateway",
-        "app/"
-    ],
-    "dependencies": {
-        "express": "^4.21.0",
-        "faker": "^6.6.6"
-    },
-    "devDependencies": {
-        "concurrently": "^9.0.1"
-    }
+  "name": "mocktopus-monorepo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently --names \"frontend,payments,accounts,gateway\" \"npm run start:frontend\" \"npm run start:payments\" \"npm run start:accounts\" \"npm run start:gateway\"",
+    "start:frontend": "npm run start --prefix app",
+    "start:payments": "npm run start --prefix backend/payments",
+    "start:accounts": "npm run start --prefix backend/accounts",
+    "start:gateway": "npm run start --prefix backend/api-gateway",
+    "stop:frontend": "kill-port 8000",
+    "stop:payments": "kill-port 8001",
+    "stop:accounts": "kill-port 8002",
+    "stop:gateway": "kill-port 8004",
+    "stop": "npm run stop:frontend && npm run stop:payments && npm run stop:accounts && npm run stop:gateway"
+  },
+  "workspaces": [
+    "backend/payments",
+    "backend/accounts",
+    "backend/foreignexchange",
+    "backend/api-gateway",
+    "app/"
+  ],
+  "dependencies": {
+    "express": "^4.21.0",
+    "faker": "^6.6.6"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
 }

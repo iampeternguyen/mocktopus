@@ -26,6 +26,7 @@ const ServerHealthComponent = ({ path, name }) => {
     },
     [loading, isHealthy, path]
   );
+  
   // Simulate health check
   useEffect(() => {
     const intervalId = setInterval(checkServerHealth, 1000);

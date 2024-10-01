@@ -53,7 +53,7 @@ function logRequestResponse(url, method, reqBody, responseBody, isError) {
 // Function to call the external service
 async function callExternalService(url, method, reqBody, headers) {
   try {
-    console.log("Request body is ", reqBody);
+    // console.log("Request body is ", reqBody);
     const options = {
       method,
       url,
@@ -132,7 +132,9 @@ app.use(async (req, res) => {
   }
 
   const service = servicesConfig[servicePath];
-  console.info("Request ", req.url, req.method, req.body);
+  if (!req.url.endsWith("/health")) {
+    console.info("Request ", req.url, req.method, req.body);
+  }
 
   if (service.isHealthy) {
     // Log the incoming request
@@ -145,12 +147,14 @@ app.use(async (req, res) => {
       req.body,
       req.headers
     );
-    console.log(
-      "Response received for request ",
-      req.url,
-      req.method,
-      externalResponse.data
-    );
+    if (!req.url.endsWith("/health")) {
+      console.log(
+        "Response received for request ",
+        req.url,
+        req.method,
+        externalResponse.data
+      );
+    }
 
     if (externalResponse.status >= 200 && externalResponse.status < 400) {
       // Log the request and response
