@@ -26,6 +26,7 @@ const ServerHealthComponent = ({ path, name }) => {
     },
     [loading, isHealthy, path]
   );
+  
   // Simulate health check
   useEffect(() => {
     const intervalId = setInterval(checkServerHealth, 1000);
@@ -55,7 +56,7 @@ const ServerHealthComponent = ({ path, name }) => {
         <div
           className={`status-indicator ${isHealthy ? "healthy" : "unhealthy"}`}
         ></div>
-        <button onClick={killServer} disabled={!isHealthy || loading}>
+        <button onClick={killServer} disabled={!isHealthy}>
           Kill Server
         </button>
 

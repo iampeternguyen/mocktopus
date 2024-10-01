@@ -88,33 +88,38 @@ async function callExternalService(url, method, reqBody, headers) {
 
 // Function to get a response from ChatGPT based on the monitored data
 async function getChatGptResponse(url, method, logData) {
-    try {
-        const response = await axios.post(
-            chatGptAPIUrl,
-            {
-                model: "gpt-3.5-turbo", // or whichever model you're using
-                messages: [
-                    {
-                        role: "user",
-                        content: `Based on the ${url} and method ${method}, generate a relevant response: ${JSON.stringify(
-                            logData
-                        )} in json format without newline characters. if matching response doesnt exist then search matching json schema and generate response with newline characters`,
-                    },
-                ],
-            },
-            {
-                headers: {
-                    Authorization: `Bearer ${chatGptApiKey}`,
-                    "Content-Type": "application/json",
-                },
-            }
-        );
+  if (!url || !method) {
+    return null;
+  }
+  try {
+    const response = await axios.post(
+      chatGptAPIUrl,
+      {
+        model: "gpt-3.5-turbo", // or whichever model you're using
+        messages: [
+          {
+            role: "user",
+            content: `Based on the ${url} and method ${method}, generate a relevant response: ${JSON.stringify(
+              logData
+            )} in json format without newline characters. if matching response doesnt exist then search matching json schema and generate response with newline characters`,
+          },
+        ],
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${chatGptApiKey}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    console.log(response.data);
 
-        return JSON.parse(response.data.choices[0].message.content); // Extract the content from the response
-    } catch (error) {
-        console.error("Error getting response from ChatGPT:", error.message);
-        return null; // Return null if the API call fails
-    }
+    console.log(response.data.choices[0].message.content);
+    return JSON.parse(response.data.choices[0].message.content); // Extract the content from the response
+  } catch (error) {
+    console.error("Error getting response from ChatGPT:", error.message);
+    return null; // Return null if the API call fails
+  }
 }
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
