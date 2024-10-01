@@ -156,6 +156,7 @@ app.use(async (req, res, next) => {
     console.log("Response from swagger ", respondData);
     if (respondData) {
       console.log("Response found");
+      res.setHeader("X-Mocks", "true")
       return res.status(200).json(respondData);
     }
     console.log("Sending 404");
