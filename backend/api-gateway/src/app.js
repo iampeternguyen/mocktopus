@@ -150,7 +150,7 @@ app.use(async (req, res, next) => {
       res.send("Done");
       return;
     }
-    var serviceUrlpath = req.path.split("/")[2];
+    var serviceUrlpath = req.path.split("/")[2] || req.path;
 
     var respondData = await handleRequest(serviceUrlpath, req.method);
     console.log("Response from swagger ", respondData);
@@ -163,10 +163,9 @@ app.use(async (req, res, next) => {
   }
 
   const service = servicesConfig[servicePath];
-    const serviceUrlWithPath = `${service.url}/${req.path.split("/")[2]}`;
+  const serviceUrlWithPath = `${service.url}/${req.path.split("/")[2]}`;
 
   if (service.isHealthy) {
-
     // Call the external service
     const externalResponse = await callExternalService(
       serviceUrlWithPath,
@@ -230,9 +229,8 @@ app.use(async (req, res, next) => {
       return;
     }
 
-    console.log('service url path', '/' + serviceUrlWithPath.split("/").slice(3).join("/"));
     const aiResponse = await handleRequest(
-      '/' + serviceUrlWithPath.split("/").slice(3).join("/"),
+      "/" + serviceUrlWithPath.split("/").slice(3).join("/"),
       req.method
     );
 
@@ -297,7 +295,7 @@ async function loadAllSwaggerFiles(directory) {
 function findPathAndMethodInAll(swaggerDocs, requestedPath, method) {
   const lowerCaseMethod = method.toLowerCase();
   let bestMatch = null;
-  let highestSimilarity = 0;
+  let highestSimilarity = .8;
 
   for (const swagger of swaggerDocs) {
     const paths = swagger.paths;
@@ -308,7 +306,6 @@ function findPathAndMethodInAll(swaggerDocs, requestedPath, method) {
         requestedPath,
         swaggerPath
       );
-
       // Check if the similarity is higher than the previous best match
       if (similarity > highestSimilarity) {
         const methods = paths[swaggerPath];
@@ -377,7 +374,7 @@ async function generateChatGPTResponse(schema) {
       }
     );
 
-      console.log(response.data.choices[0].message.content)
+    console.log(response.data.choices[0].message.content);
     return JSON.parse(response.data.choices[0].message.content); // Parse and return the generated JSON response
   } catch (error) {
     console.error("Error calling ChatGPT API:", error);
