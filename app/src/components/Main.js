@@ -89,10 +89,6 @@ const Main = () => {
             name="accounts"
             path={API_REQUEST + "/accounts-services"}
           />
-          <ServerHealthComponent
-            name="exchange"
-            path={API_REQUEST + "/exchange-services"}
-          />
         </div>
       </header>
 

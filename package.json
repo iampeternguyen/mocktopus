@@ -2,12 +2,11 @@
     "name": "mocktopus-monorepo",
     "version": "1.0.0",
     "scripts": {
-        "start": "concurrently --names \"frontend,payments,accounts,foreignexchange,gateway\" \"npm run start --prefix app\" \"npm run start --prefix backend/payments\"  \"npm run start --prefix backend/accounts\" \"npm run start --prefix backend/foreignexchange\" \"npm run start --prefix backend/api-gateway\""
+        "start": "concurrently --names \"frontend,payments,accounts,gateway\" \"npm run start --prefix app\" \"npm run start --prefix backend/payments\"  \"npm run start --prefix backend/accounts\"  \"npm run start --prefix backend/api-gateway\""
     },
     "workspaces": [
         "backend/payments",
         "backend/accounts",
-        "backend/foreignexchange",
         "backend/api-gateway",
         "app/"
     ],
