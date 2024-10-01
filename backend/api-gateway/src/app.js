@@ -218,6 +218,18 @@ app.use(async (req, res, next) => {
       }
     }
   } else {
+    if (req.method === "OPTIONS") {
+      console.log("Doing preflight response");
+      res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
+      res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, POST, PUT, DELETE, OPTIONS"
+      ); // Allow specific methods
+      res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+      res.status(200);
+      res.send("Done");
+      return;
+    }
     const aiResponse = await getChatGptResponse(
       serviceUrlWithPath,
       req.method,
