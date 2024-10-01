@@ -798,5 +798,2011 @@
       }
     ],
     "timestamp": "2024-10-01T08:39:55.128Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:08:50.257Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_8acea7c6-29ae-42d0-ada5-ae30be275d2d",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "464.76",
+        "currency": "EUR",
+        "paymentReference": "Invoice #8230",
+        "executionDate": "2023-03-13"
+      },
+      {
+        "paymentId": "pay_ab98a15a-b3bf-41b2-884b-d36d265c6fc3",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "748.18",
+        "currency": "USD",
+        "paymentReference": "Invoice #6455",
+        "executionDate": "2024-10-30"
+      },
+      {
+        "paymentId": "pay_46924685-c55c-49e8-ad89-c572ae1e0fa2",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "596.84",
+        "currency": "EUR",
+        "paymentReference": "Invoice #7015",
+        "executionDate": "2024-02-21"
+      },
+      {
+        "paymentId": "pay_6e50df1f-f6ee-4fee-bbf4-55abd9201735",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "877.36",
+        "currency": "USD",
+        "paymentReference": "Invoice #6045",
+        "executionDate": "2023-05-23"
+      },
+      {
+        "paymentId": "pay_677e9ff6-e2b6-4c56-9a20-527182859428",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "966.06",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4688",
+        "executionDate": "2023-07-12"
+      },
+      {
+        "paymentId": "pay_1ce28390-2ad2-4e0a-af68-0118955e64fd",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "707.24",
+        "currency": "EUR",
+        "paymentReference": "Invoice #5",
+        "executionDate": "2024-07-06"
+      },
+      {
+        "paymentId": "pay_2b34ef4d-4c47-4b62-bd4b-7e35a6a9cf9a",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "648.02",
+        "currency": "GBP",
+        "paymentReference": "Invoice #7913",
+        "executionDate": "2023-07-16"
+      },
+      {
+        "paymentId": "pay_9a0d5fc1-5194-4532-ab2b-7f3f62a5d9bc",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "480.50",
+        "currency": "USD",
+        "paymentReference": "Invoice #7464",
+        "executionDate": "2024-03-17"
+      },
+      {
+        "paymentId": "pay_55407b74-a349-49ff-b31d-e69026fbaac6",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "951.57",
+        "currency": "EUR",
+        "paymentReference": "Invoice #595",
+        "executionDate": "2024-01-30"
+      },
+      {
+        "paymentId": "pay_b3fbf60a-a241-4765-9179-f3193e51e06f",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "590.13",
+        "currency": "GBP",
+        "paymentReference": "Invoice #4541",
+        "executionDate": "2023-10-02"
+      }
+    ],
+    "timestamp": "2024-10-01T09:08:50.263Z"
+  },
+  {
+    "url": "/accounts-service/accounts/account-id-1234",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:09:17.467Z"
+  },
+  {
+    "url": "http://localhost:8002/accounts",
+    "method": "PUT",
+    "request": {
+      "name": "Jane Doe",
+      "iban": "DE89370400440532013000",
+      "balance": 1500.75,
+      "currency": "EUR"
+    },
+    "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot PUT /accounts</pre>\n</body>\n</html>\n",
+    "isError": true,
+    "timestamp": "2024-10-01T09:09:17.491Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:09:23.035Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "accountId": "eb7adaf5-efc5-4ce9-ba8c-fcf94d848aeb",
+        "name": "Marion Fadel III",
+        "iban": "DE30400400010000000201",
+        "balance": 623.55,
+        "currency": "EUR",
+        "createdAt": "2024-07-17T10:28:17.329Z"
+      },
+      {
+        "accountId": "cf7809b7-d275-4d0e-8343-60efbf00c9f1",
+        "name": "Herman Schoen III",
+        "iban": "DE30400400010000000201",
+        "balance": 716.48,
+        "currency": "EUR",
+        "createdAt": "2024-02-14T21:31:09.238Z"
+      },
+      {
+        "accountId": "8dcb07c6-83f2-4b11-a0d8-82d0971d43c7",
+        "name": "Tasha Christiansen",
+        "iban": "DE30400400010000000201",
+        "balance": 991.37,
+        "currency": "EUR",
+        "createdAt": "2024-07-30T21:50:29.667Z"
+      },
+      {
+        "accountId": "1be0fbad-a663-473f-918a-7b047a4fba54",
+        "name": "Ignacio Rau",
+        "iban": "DE30400400010000000201",
+        "balance": 422.28,
+        "currency": "EUR",
+        "createdAt": "2023-12-02T08:47:59.202Z"
+      },
+      {
+        "accountId": "8a4c7715-7371-470a-a042-067b1fdac607",
+        "name": "Nelson Skiles I",
+        "iban": "DE30400400010000000201",
+        "balance": 631.83,
+        "currency": "EUR",
+        "createdAt": "2023-10-14T12:18:19.753Z"
+      },
+      {
+        "accountId": "6715e0b0-d910-4257-9f27-5257f0e37dea",
+        "name": "Marcos Zboncak",
+        "iban": "DE30400400010000000201",
+        "balance": 490.77,
+        "currency": "EUR",
+        "createdAt": "2024-09-21T16:03:19.923Z"
+      },
+      {
+        "accountId": "9c6cfa0c-2d2a-4508-893e-4815e9250968",
+        "name": "Brenda Mueller",
+        "iban": "DE30400400010000000201",
+        "balance": 197.04,
+        "currency": "EUR",
+        "createdAt": "2024-08-21T07:47:20.505Z"
+      },
+      {
+        "accountId": "6c0747cd-ecfd-4c16-81fa-c15c2a618ed5",
+        "name": "Pat Crooks PhD",
+        "iban": "DE30400400010000000201",
+        "balance": 657.24,
+        "currency": "EUR",
+        "createdAt": "2024-07-22T06:05:24.897Z"
+      },
+      {
+        "accountId": "226f2ace-f724-47a5-9e9e-d6da3152dd6d",
+        "name": "Leo O'Hara Jr.",
+        "iban": "DE30400400010000000201",
+        "balance": 621.64,
+        "currency": "EUR",
+        "createdAt": "2024-05-25T21:44:32.099Z"
+      },
+      {
+        "accountId": "bacae4e5-2551-4f37-81e5-2610023036ff",
+        "name": "Viola Larkin",
+        "iban": "DE30400400010000000201",
+        "balance": 551.46,
+        "currency": "EUR",
+        "createdAt": "2024-02-21T12:55:47.220Z"
+      },
+      {
+        "accountId": "5719ad8e-647f-4912-b836-a3fc958b949a",
+        "name": "Dr. Herman Ritchie",
+        "iban": "DE30400400010000000201",
+        "balance": 642.42,
+        "currency": "EUR",
+        "createdAt": "2024-08-26T22:26:14.224Z"
+      },
+      {
+        "accountId": "719a9415-013e-4f6c-8c14-abaca36b4457",
+        "name": "Hubert Stamm",
+        "iban": "DE30400400010000000201",
+        "balance": 176.57,
+        "currency": "EUR",
+        "createdAt": "2024-04-19T11:14:41.634Z"
+      },
+      {
+        "accountId": "6fb9b09f-8b4a-4baf-ba4d-9f15d0603315",
+        "name": "Heather Rath",
+        "iban": "DE30400400010000000201",
+        "balance": 886.14,
+        "currency": "EUR",
+        "createdAt": "2024-06-24T06:09:34.307Z"
+      },
+      {
+        "accountId": "2e363fee-8580-45b2-89a8-b583ac3cf02c",
+        "name": "Vickie Haag",
+        "iban": "DE30400400010000000201",
+        "balance": 492.6,
+        "currency": "EUR",
+        "createdAt": "2023-11-03T04:30:27.554Z"
+      },
+      {
+        "accountId": "e902fdd2-c1b6-4478-a1dd-042eb01da434",
+        "name": "Joseph Sanford",
+        "iban": "DE30400400010000000201",
+        "balance": 664.17,
+        "currency": "EUR",
+        "createdAt": "2024-08-17T15:17:32.255Z"
+      },
+      {
+        "accountId": "ed5d6025-5097-4a31-90bf-8f37a5b44b9e",
+        "name": "Dr. Nathan Fahey",
+        "iban": "DE30400400010000000201",
+        "balance": 43.51,
+        "currency": "EUR",
+        "createdAt": "2023-12-20T22:37:12.139Z"
+      },
+      {
+        "accountId": "c21b273b-4bab-41f5-a270-74dad267d6fd",
+        "name": "Lynne Nitzsche",
+        "iban": "DE30400400010000000201",
+        "balance": 758.82,
+        "currency": "EUR",
+        "createdAt": "2024-07-12T18:55:29.535Z"
+      },
+      {
+        "accountId": "eed84f08-8a28-4eaa-b900-db809d3ea357",
+        "name": "Faith Lebsack",
+        "iban": "DE30400400010000000201",
+        "balance": 101.8,
+        "currency": "EUR",
+        "createdAt": "2024-01-15T01:39:22.478Z"
+      },
+      {
+        "accountId": "71e6de20-0a05-4879-82b6-be118a1f4409",
+        "name": "Sue Lemke",
+        "iban": "DE30400400010000000201",
+        "balance": 835.39,
+        "currency": "EUR",
+        "createdAt": "2024-09-01T02:25:03.197Z"
+      },
+      {
+        "accountId": "ecff9088-2e85-40d5-a462-a8726cead63e",
+        "name": "Stewart Wisoky-Prosacco",
+        "iban": "DE30400400010000000201",
+        "balance": 794.64,
+        "currency": "EUR",
+        "createdAt": "2023-12-14T17:53:35.626Z"
+      }
+    ],
+    "timestamp": "2024-10-01T09:09:23.042Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:09:26.885Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "GET",
+    "request": {},
+    "timestamp": "2024-10-01T09:09:26.891Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:10:17.431Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "accountId": "d8562111-9320-40bf-baf3-4e34077a4768",
+        "name": "Jo Rath",
+        "iban": "DE12345678901234567890",
+        "balance": 461.51,
+        "currency": "EUR",
+        "createdAt": "2024-07-21T05:29:49.207Z"
+      },
+      {
+        "accountId": "75a5b081-4998-48ad-a74d-e28a886d40e7",
+        "name": "Norman Sipes",
+        "iban": "DE12345678901234567890",
+        "balance": 184.04,
+        "currency": "EUR",
+        "createdAt": "2024-06-23T13:39:20.453Z"
+      },
+      {
+        "accountId": "86917429-e938-4a78-8adc-01adc9d34a7d",
+        "name": "Kim Medhurst",
+        "iban": "DE12345678901234567890",
+        "balance": 391.2,
+        "currency": "EUR",
+        "createdAt": "2024-01-31T07:25:47.536Z"
+      },
+      {
+        "accountId": "306a52d0-77b4-49fc-9c69-d7544ec8c224",
+        "name": "Nathan Bauch-Gottlieb II",
+        "iban": "DE12345678901234567890",
+        "balance": 329.07,
+        "currency": "EUR",
+        "createdAt": "2024-02-02T00:47:51.341Z"
+      },
+      {
+        "accountId": "1b7c25e9-e54f-4aac-b87d-4522f68761f1",
+        "name": "Justin Rolfson",
+        "iban": "DE12345678901234567890",
+        "balance": 344.03,
+        "currency": "EUR",
+        "createdAt": "2024-02-04T18:49:05.315Z"
+      },
+      {
+        "accountId": "59383b9b-a5c7-4cfc-b98e-9b28fe8d8c46",
+        "name": "Dr. Melvin Weissnat",
+        "iban": "DE12345678901234567890",
+        "balance": 962.4,
+        "currency": "EUR",
+        "createdAt": "2024-02-11T07:33:40.086Z"
+      },
+      {
+        "accountId": "a78270e7-d309-4083-966f-96c854b582ff",
+        "name": "Janis Moen",
+        "iban": "DE12345678901234567890",
+        "balance": 398.77,
+        "currency": "EUR",
+        "createdAt": "2023-12-15T22:45:13.324Z"
+      },
+      {
+        "accountId": "9b8836de-6ce0-4e54-ad7f-a9776888e3bd",
+        "name": "Pat Fadel",
+        "iban": "DE12345678901234567890",
+        "balance": 960.2,
+        "currency": "EUR",
+        "createdAt": "2024-01-27T07:27:14.832Z"
+      },
+      {
+        "accountId": "d395ba9b-2c42-44c9-809f-86d0a38a5180",
+        "name": "Francisco Treutel",
+        "iban": "DE12345678901234567890",
+        "balance": 207.27,
+        "currency": "EUR",
+        "createdAt": "2024-08-28T10:41:18.703Z"
+      },
+      {
+        "accountId": "57359dd7-fb74-4e26-ab96-3283295978b5",
+        "name": "Natasha Roob",
+        "iban": "DE12345678901234567890",
+        "balance": 362.06,
+        "currency": "EUR",
+        "createdAt": "2023-10-16T14:09:39.002Z"
+      },
+      {
+        "accountId": "17f08b65-9197-42b2-b0e2-b0a0e4fd6ab7",
+        "name": "Jennifer Flatley",
+        "iban": "DE12345678901234567890",
+        "balance": 559.52,
+        "currency": "EUR",
+        "createdAt": "2024-03-31T10:55:18.072Z"
+      },
+      {
+        "accountId": "595a7959-55c8-4dcf-a058-5ee690babf54",
+        "name": "Van Jacobi",
+        "iban": "DE12345678901234567890",
+        "balance": 771.39,
+        "currency": "EUR",
+        "createdAt": "2024-08-02T16:21:57.606Z"
+      },
+      {
+        "accountId": "9e86dd7f-3e4c-48e4-8812-87fc73213520",
+        "name": "Rufus Hahn",
+        "iban": "DE12345678901234567890",
+        "balance": 607.52,
+        "currency": "EUR",
+        "createdAt": "2024-01-08T04:18:25.887Z"
+      },
+      {
+        "accountId": "8f424fed-0397-430f-a3c4-2545130dc2cf",
+        "name": "Ms. Candace Kshlerin Sr.",
+        "iban": "DE12345678901234567890",
+        "balance": 590.58,
+        "currency": "EUR",
+        "createdAt": "2023-10-22T16:01:33.066Z"
+      },
+      {
+        "accountId": "1373c369-ce17-4c15-8143-2b1693962540",
+        "name": "Ronald O'Kon",
+        "iban": "DE12345678901234567890",
+        "balance": 475.08,
+        "currency": "EUR",
+        "createdAt": "2024-06-29T11:43:58.089Z"
+      },
+      {
+        "accountId": "f4249bea-5859-4221-b151-e0b43b81542d",
+        "name": "Laura VonRueden",
+        "iban": "DE12345678901234567890",
+        "balance": 32.56,
+        "currency": "EUR",
+        "createdAt": "2024-02-17T18:04:10.194Z"
+      },
+      {
+        "accountId": "1a4effea-b24d-4519-b27a-d29f289cadcc",
+        "name": "Pam Botsford-Trantow",
+        "iban": "DE12345678901234567890",
+        "balance": 856.08,
+        "currency": "EUR",
+        "createdAt": "2024-05-15T19:54:49.333Z"
+      },
+      {
+        "accountId": "b1d10635-0e0b-44e3-b90a-0146555da15c",
+        "name": "Ramona Nader",
+        "iban": "DE12345678901234567890",
+        "balance": 888.35,
+        "currency": "EUR",
+        "createdAt": "2024-03-09T16:06:14.900Z"
+      },
+      {
+        "accountId": "049f91f7-83b2-4543-9a1e-a70e7f050a7d",
+        "name": "Terri Nicolas",
+        "iban": "DE12345678901234567890",
+        "balance": 552.47,
+        "currency": "EUR",
+        "createdAt": "2024-01-27T19:12:52.911Z"
+      },
+      {
+        "accountId": "370f6ae0-16fb-4091-bfa1-c67f05e3ba11",
+        "name": "Pablo Harris",
+        "iban": "DE12345678901234567890",
+        "balance": 288.86,
+        "currency": "EUR",
+        "createdAt": "2024-06-18T03:01:28.776Z"
+      }
+    ],
+    "timestamp": "2024-10-01T09:10:17.438Z"
+  },
+  {
+    "url": "/payments-service/payments/payment-id-1234",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:10:23.263Z"
+  },
+  {
+    "url": "/payments-service/payments/payment-id-1234",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_b3462345-45c8-4ccc-977f-9d47dbc61c5a",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "989.47",
+        "currency": "GBP",
+        "paymentReference": "Invoice #3069",
+        "executionDate": "2023-07-20"
+      },
+      {
+        "paymentId": "pay_2ea25fc7-e2a9-4943-b5ce-d40277798db0",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "671.92",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4474",
+        "executionDate": "2023-01-21"
+      },
+      {
+        "paymentId": "pay_794d9e60-229d-449d-b3f0-22c982d44640",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "19.57",
+        "currency": "GBP",
+        "paymentReference": "Invoice #6721",
+        "executionDate": "2023-06-21"
+      },
+      {
+        "paymentId": "pay_9a3f78d9-eb22-49fc-9c1c-b5193952233c",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "764.51",
+        "currency": "USD",
+        "paymentReference": "Invoice #2711",
+        "executionDate": "2023-12-29"
+      },
+      {
+        "paymentId": "pay_4db22615-1c3f-4a41-83e6-45be94c70151",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "247.20",
+        "currency": "USD",
+        "paymentReference": "Invoice #3052",
+        "executionDate": "2023-10-19"
+      },
+      {
+        "paymentId": "pay_9e795108-684d-4810-a61e-05a7cecd60e4",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "819.72",
+        "currency": "GBP",
+        "paymentReference": "Invoice #6144",
+        "executionDate": "2023-05-29"
+      },
+      {
+        "paymentId": "pay_f4cf5fb1-e030-4a86-99e1-bd8ef238a681",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "84.32",
+        "currency": "USD",
+        "paymentReference": "Invoice #7602",
+        "executionDate": "2024-03-14"
+      },
+      {
+        "paymentId": "pay_e92225c7-2110-4344-be09-3ffdf5fa1ed5",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "87.49",
+        "currency": "GBP",
+        "paymentReference": "Invoice #3217",
+        "executionDate": "2023-12-08"
+      },
+      {
+        "paymentId": "pay_7ec1c3da-d4b1-4598-8f8b-58f91a07b4eb",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "192.56",
+        "currency": "USD",
+        "paymentReference": "Invoice #669",
+        "executionDate": "2024-05-12"
+      },
+      {
+        "paymentId": "pay_c892474d-f825-4aea-80dc-bdee0870a0cd",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "646.92",
+        "currency": "EUR",
+        "paymentReference": "Invoice #7369",
+        "executionDate": "2023-06-12"
+      }
+    ],
+    "timestamp": "2024-10-01T09:10:23.270Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:10:26.686Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_b3462345-45c8-4ccc-977f-9d47dbc61c5a",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "989.47",
+        "currency": "GBP",
+        "paymentReference": "Invoice #3069",
+        "executionDate": "2023-07-20"
+      },
+      {
+        "paymentId": "pay_2ea25fc7-e2a9-4943-b5ce-d40277798db0",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "671.92",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4474",
+        "executionDate": "2023-01-21"
+      },
+      {
+        "paymentId": "pay_794d9e60-229d-449d-b3f0-22c982d44640",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "19.57",
+        "currency": "GBP",
+        "paymentReference": "Invoice #6721",
+        "executionDate": "2023-06-21"
+      },
+      {
+        "paymentId": "pay_9a3f78d9-eb22-49fc-9c1c-b5193952233c",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "764.51",
+        "currency": "USD",
+        "paymentReference": "Invoice #2711",
+        "executionDate": "2023-12-29"
+      },
+      {
+        "paymentId": "pay_4db22615-1c3f-4a41-83e6-45be94c70151",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "247.20",
+        "currency": "USD",
+        "paymentReference": "Invoice #3052",
+        "executionDate": "2023-10-19"
+      },
+      {
+        "paymentId": "pay_9e795108-684d-4810-a61e-05a7cecd60e4",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "819.72",
+        "currency": "GBP",
+        "paymentReference": "Invoice #6144",
+        "executionDate": "2023-05-29"
+      },
+      {
+        "paymentId": "pay_f4cf5fb1-e030-4a86-99e1-bd8ef238a681",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "84.32",
+        "currency": "USD",
+        "paymentReference": "Invoice #7602",
+        "executionDate": "2024-03-14"
+      },
+      {
+        "paymentId": "pay_e92225c7-2110-4344-be09-3ffdf5fa1ed5",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "87.49",
+        "currency": "GBP",
+        "paymentReference": "Invoice #3217",
+        "executionDate": "2023-12-08"
+      },
+      {
+        "paymentId": "pay_7ec1c3da-d4b1-4598-8f8b-58f91a07b4eb",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "192.56",
+        "currency": "USD",
+        "paymentReference": "Invoice #669",
+        "executionDate": "2024-05-12"
+      },
+      {
+        "paymentId": "pay_c892474d-f825-4aea-80dc-bdee0870a0cd",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "646.92",
+        "currency": "EUR",
+        "paymentReference": "Invoice #7369",
+        "executionDate": "2023-06-12"
+      }
+    ],
+    "timestamp": "2024-10-01T09:10:26.692Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "POST",
+    "request": {
+      "paymentType": "SEPA",
+      "creditorName": "John Doe",
+      "creditorAccount": "DE89370400440532013000",
+      "creditorBIC": "COBADEFFXXX",
+      "debtorName": "Jane Smith",
+      "debtorAccount": "GB33BUKB20201555555555",
+      "debtorBIC": "NWBKGB2L",
+      "amount": 1000.5,
+      "currency": "EUR",
+      "paymentReference": "Invoice #2024-0023",
+      "executionDate": "2024-09-30"
+    },
+    "response": {
+      "paymentId": "pay_69702f45-80a8-4ed2-b75e-4e017740e7a2",
+      "status": "pending"
+    },
+    "timestamp": "2024-10-01T09:10:29.099Z"
+  },
+  {
+    "url": "/payments-service/payments/accounts/DE89370400440532013000/",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:10:32.000Z"
+  },
+  {
+    "url": "/payments-service/payments/accounts/DE89370400440532013000/",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_b3462345-45c8-4ccc-977f-9d47dbc61c5a",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "989.47",
+        "currency": "GBP",
+        "paymentReference": "Invoice #3069",
+        "executionDate": "2023-07-20"
+      },
+      {
+        "paymentId": "pay_2ea25fc7-e2a9-4943-b5ce-d40277798db0",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "671.92",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4474",
+        "executionDate": "2023-01-21"
+      },
+      {
+        "paymentId": "pay_794d9e60-229d-449d-b3f0-22c982d44640",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "19.57",
+        "currency": "GBP",
+        "paymentReference": "Invoice #6721",
+        "executionDate": "2023-06-21"
+      },
+      {
+        "paymentId": "pay_9a3f78d9-eb22-49fc-9c1c-b5193952233c",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "764.51",
+        "currency": "USD",
+        "paymentReference": "Invoice #2711",
+        "executionDate": "2023-12-29"
+      },
+      {
+        "paymentId": "pay_4db22615-1c3f-4a41-83e6-45be94c70151",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "247.20",
+        "currency": "USD",
+        "paymentReference": "Invoice #3052",
+        "executionDate": "2023-10-19"
+      },
+      {
+        "paymentId": "pay_9e795108-684d-4810-a61e-05a7cecd60e4",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "819.72",
+        "currency": "GBP",
+        "paymentReference": "Invoice #6144",
+        "executionDate": "2023-05-29"
+      },
+      {
+        "paymentId": "pay_f4cf5fb1-e030-4a86-99e1-bd8ef238a681",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "84.32",
+        "currency": "USD",
+        "paymentReference": "Invoice #7602",
+        "executionDate": "2024-03-14"
+      },
+      {
+        "paymentId": "pay_e92225c7-2110-4344-be09-3ffdf5fa1ed5",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "87.49",
+        "currency": "GBP",
+        "paymentReference": "Invoice #3217",
+        "executionDate": "2023-12-08"
+      },
+      {
+        "paymentId": "pay_7ec1c3da-d4b1-4598-8f8b-58f91a07b4eb",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "192.56",
+        "currency": "USD",
+        "paymentReference": "Invoice #669",
+        "executionDate": "2024-05-12"
+      },
+      {
+        "paymentId": "pay_c892474d-f825-4aea-80dc-bdee0870a0cd",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "646.92",
+        "currency": "EUR",
+        "paymentReference": "Invoice #7369",
+        "executionDate": "2023-06-12"
+      },
+      {
+        "paymentId": "pay_69702f45-80a8-4ed2-b75e-4e017740e7a2",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "GB33BUKB20201555555555",
+        "amount": 1000.5,
+        "currency": "EUR",
+        "paymentReference": "Invoice #2024-0023",
+        "executionDate": "2024-09-30"
+      }
+    ],
+    "timestamp": "2024-10-01T09:10:32.007Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:10:34.387Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "GET",
+    "request": {},
+    "timestamp": "2024-10-01T09:10:34.397Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:11:43.632Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "accountId": "608c61c1-efaf-4ab4-a3a4-3814b51f6fcc",
+        "name": "Kate Senger",
+        "iban": "DE29500105170648489890",
+        "balance": 702.81,
+        "currency": "EUR",
+        "createdAt": "2024-04-30T15:48:11.713Z"
+      },
+      {
+        "accountId": "3e767b1b-3655-4c85-a2e1-8daba0491598",
+        "name": "Danielle Kuphal-Mayer",
+        "iban": "DE29500105170648489890",
+        "balance": 604.51,
+        "currency": "EUR",
+        "createdAt": "2023-12-26T03:23:15.929Z"
+      },
+      {
+        "accountId": "f98251c8-f11a-4c06-9f16-7c2e59a2d43e",
+        "name": "Mr. Alfonso McGlynn",
+        "iban": "DE29500105170648489890",
+        "balance": 788.44,
+        "currency": "EUR",
+        "createdAt": "2024-04-25T15:50:17.179Z"
+      },
+      {
+        "accountId": "71b3b0b9-b214-48de-8256-5aecc05ed769",
+        "name": "Dwight Fritsch",
+        "iban": "DE29500105170648489890",
+        "balance": 719.56,
+        "currency": "EUR",
+        "createdAt": "2024-03-04T00:40:43.946Z"
+      },
+      {
+        "accountId": "129a62bb-4d21-4beb-8229-b19d4ee1b9a7",
+        "name": "Milton Cronin",
+        "iban": "DE29500105170648489890",
+        "balance": 472.09,
+        "currency": "EUR",
+        "createdAt": "2024-05-28T19:17:20.212Z"
+      },
+      {
+        "accountId": "5cfafc94-9afd-41ee-bdbe-a41b9da963e8",
+        "name": "Hattie Lind",
+        "iban": "DE29500105170648489890",
+        "balance": 239.64,
+        "currency": "EUR",
+        "createdAt": "2024-05-04T03:32:40.571Z"
+      },
+      {
+        "accountId": "74a0a27e-55bb-48eb-848f-e7e4c76cf9f8",
+        "name": "Frank Fisher",
+        "iban": "DE29500105170648489890",
+        "balance": 603.41,
+        "currency": "EUR",
+        "createdAt": "2023-12-01T06:50:14.855Z"
+      },
+      {
+        "accountId": "e0a03c92-927e-4c79-86a3-5bfcd9ed4ce2",
+        "name": "Jeff Schumm-Runolfsson",
+        "iban": "DE29500105170648489890",
+        "balance": 340.18,
+        "currency": "EUR",
+        "createdAt": "2024-08-19T11:14:59.027Z"
+      },
+      {
+        "accountId": "20cb91b2-4625-4f03-909a-34d480f6f95e",
+        "name": "Marlene Romaguera",
+        "iban": "DE29500105170648489890",
+        "balance": 546.53,
+        "currency": "EUR",
+        "createdAt": "2024-08-05T08:16:11.553Z"
+      },
+      {
+        "accountId": "3e61b8ef-249d-49ff-991e-325fa663b016",
+        "name": "Suzanne Hills",
+        "iban": "DE29500105170648489890",
+        "balance": 220.75,
+        "currency": "EUR",
+        "createdAt": "2023-12-31T12:24:14.897Z"
+      },
+      {
+        "accountId": "1d28ebcb-d20c-4a10-b0cc-b5f4df19a04f",
+        "name": "Tony Gibson",
+        "iban": "DE29500105170648489890",
+        "balance": 233.35,
+        "currency": "EUR",
+        "createdAt": "2024-04-30T02:20:40.173Z"
+      },
+      {
+        "accountId": "433b81d8-e022-4abd-8ad7-146317a9dcec",
+        "name": "Nelson Rath",
+        "iban": "DE29500105170648489890",
+        "balance": 526.67,
+        "currency": "EUR",
+        "createdAt": "2024-04-03T22:02:48.698Z"
+      },
+      {
+        "accountId": "c49a7712-5ec7-4bc6-bae8-c1c863f30c75",
+        "name": "Nicholas Jenkins I",
+        "iban": "DE29500105170648489890",
+        "balance": 509.51,
+        "currency": "EUR",
+        "createdAt": "2023-12-07T11:41:21.340Z"
+      },
+      {
+        "accountId": "40e5f365-8d25-4c84-b734-195012b8fb06",
+        "name": "Ben Breitenberg",
+        "iban": "DE29500105170648489890",
+        "balance": 638.33,
+        "currency": "EUR",
+        "createdAt": "2024-07-07T14:56:55.916Z"
+      },
+      {
+        "accountId": "ba2bce21-984e-47b5-8067-536ec7bfbbf1",
+        "name": "Steven Bauch",
+        "iban": "DE29500105170648489890",
+        "balance": 861.74,
+        "currency": "EUR",
+        "createdAt": "2024-10-01T01:11:20.331Z"
+      },
+      {
+        "accountId": "593f41d2-8598-4d7b-8d01-57fb309fa9f3",
+        "name": "Felix Bauch",
+        "iban": "DE29500105170648489890",
+        "balance": 334.65,
+        "currency": "EUR",
+        "createdAt": "2024-07-12T10:58:51.930Z"
+      },
+      {
+        "accountId": "d54bbff8-4934-4d82-87e9-59295b2cedf5",
+        "name": "Vernon Shanahan",
+        "iban": "DE29500105170648489890",
+        "balance": 8.95,
+        "currency": "EUR",
+        "createdAt": "2023-10-15T23:12:54.138Z"
+      },
+      {
+        "accountId": "8d41c4ba-7be9-4f25-b699-816a53ef32ff",
+        "name": "Angel Lockman",
+        "iban": "DE29500105170648489890",
+        "balance": 326.66,
+        "currency": "EUR",
+        "createdAt": "2024-04-13T06:21:25.445Z"
+      },
+      {
+        "accountId": "b8c97a22-713d-4eb6-8379-690252f6cab2",
+        "name": "Arturo Braun",
+        "iban": "DE29500105170648489890",
+        "balance": 857.49,
+        "currency": "EUR",
+        "createdAt": "2023-10-23T07:18:38.913Z"
+      },
+      {
+        "accountId": "97fa7576-c4a1-4fe4-bcd2-df2c2e7baf7d",
+        "name": "Mr. Gerald Lindgren",
+        "iban": "DE29500105170648489890",
+        "balance": 944.17,
+        "currency": "EUR",
+        "createdAt": "2023-10-24T16:53:00.029Z"
+      }
+    ],
+    "timestamp": "2024-10-01T09:11:43.639Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:11:49.346Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "POST",
+    "request": {
+      "name": "John Doe",
+      "iban": "DE89370400440532013000",
+      "balance": 1000.5,
+      "currency": "EUR"
+    },
+    "response": {
+      "accountId": "8d44a987-143c-40f5-b20d-562ddddb2f9e",
+      "name": "John Doe",
+      "iban": "DE89370400440532013000",
+      "balance": 1000.5,
+      "currency": "EUR",
+      "createdAt": "2024-10-01T09:11:49.359Z"
+    },
+    "timestamp": "2024-10-01T09:11:49.360Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:11:51.694Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_e52d086a-99b2-4f5a-8ff8-718961b357fa",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "708.69",
+        "currency": "USD",
+        "paymentReference": "Invoice #6339",
+        "executionDate": "2024-06-06"
+      },
+      {
+        "paymentId": "pay_ea7a4d62-5a6b-4376-a6be-9dcb5fd5e338",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "522.60",
+        "currency": "USD",
+        "paymentReference": "Invoice #9675",
+        "executionDate": "2024-12-26"
+      },
+      {
+        "paymentId": "pay_49fcd409-6baf-424c-98d8-01ffab28fadb",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "461.30",
+        "currency": "GBP",
+        "paymentReference": "Invoice #3993",
+        "executionDate": "2024-10-13"
+      },
+      {
+        "paymentId": "pay_97449cb9-ec30-4628-9d49-7cec865aea8c",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "633.35",
+        "currency": "USD",
+        "paymentReference": "Invoice #1346",
+        "executionDate": "2024-06-12"
+      },
+      {
+        "paymentId": "pay_bb4e86be-d803-4dc0-b774-6ba3267c7103",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "821.70",
+        "currency": "USD",
+        "paymentReference": "Invoice #7728",
+        "executionDate": "2024-07-04"
+      },
+      {
+        "paymentId": "pay_36f91334-6ac3-433a-bf61-2987c5427e6d",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "659.65",
+        "currency": "GBP",
+        "paymentReference": "Invoice #7382",
+        "executionDate": "2024-10-14"
+      },
+      {
+        "paymentId": "pay_8ac5727b-9b44-46a0-be79-d2e9686924ed",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "603.34",
+        "currency": "USD",
+        "paymentReference": "Invoice #2725",
+        "executionDate": "2023-11-13"
+      },
+      {
+        "paymentId": "pay_94d0e308-a00a-4a4d-bcb5-6cf7c1fa2bd9",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "756.48",
+        "currency": "GBP",
+        "paymentReference": "Invoice #6370",
+        "executionDate": "2024-10-17"
+      },
+      {
+        "paymentId": "pay_d3b10ae7-590a-46dd-a960-ec203824a820",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "611.76",
+        "currency": "USD",
+        "paymentReference": "Invoice #8348",
+        "executionDate": "2023-08-26"
+      },
+      {
+        "paymentId": "pay_482fc2de-7770-40d6-9d0c-376d27eb6dd3",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "821.58",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4912",
+        "executionDate": "2023-02-23"
+      }
+    ],
+    "timestamp": "2024-10-01T09:11:51.701Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "GET",
+    "request": {},
+    "timestamp": "2024-10-01T09:11:54.170Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:15:47.427Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "POST",
+    "request": {
+      "paymentType": "SEPA",
+      "creditorName": "John Doe",
+      "creditorAccount": "DE89370400440532013000",
+      "creditorBIC": "COBADEFFXXX",
+      "debtorName": "Jane Smith",
+      "debtorAccount": "GB33BUKB20201555555555",
+      "debtorBIC": "NWBKGB2L",
+      "amount": 1000.5,
+      "currency": "EUR",
+      "paymentReference": "Invoice #2024-0023",
+      "executionDate": "2024-09-30"
+    },
+    "response": {
+      "paymentId": "pay_fda63789-704e-45df-bed6-9dd423b7b737",
+      "status": "pending"
+    },
+    "timestamp": "2024-10-01T09:15:47.450Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_084d9d12-cecb-4050-8fae-b43998fd6d84",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "213.48",
+        "currency": "GBP",
+        "paymentReference": "Invoice #9766",
+        "executionDate": "2024-12-28"
+      },
+      {
+        "paymentId": "pay_d43c7991-2227-4e26-876b-41bda82652ea",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "304.88",
+        "currency": "EUR",
+        "paymentReference": "Invoice #2418",
+        "executionDate": "2024-06-08"
+      },
+      {
+        "paymentId": "pay_ae967eca-ca50-491b-a4b3-ffcd064b0359",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "376.52",
+        "currency": "USD",
+        "paymentReference": "Invoice #3544",
+        "executionDate": "2023-12-31"
+      },
+      {
+        "paymentId": "pay_93715085-6602-4509-83d7-52be8c9c5bcb",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "301.33",
+        "currency": "GBP",
+        "paymentReference": "Invoice #4861",
+        "executionDate": "2024-08-11"
+      },
+      {
+        "paymentId": "pay_ea5fac44-7b83-49bd-b24e-7b26330d4486",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "664.54",
+        "currency": "GBP",
+        "paymentReference": "Invoice #5776",
+        "executionDate": "2023-05-24"
+      },
+      {
+        "paymentId": "pay_827dff38-6471-47b9-ae5a-db49649d7da7",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "791.78",
+        "currency": "GBP",
+        "paymentReference": "Invoice #523",
+        "executionDate": "2023-01-03"
+      },
+      {
+        "paymentId": "pay_0c414e51-dfab-4845-809d-cd07e87bda36",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "995.90",
+        "currency": "GBP",
+        "paymentReference": "Invoice #3525",
+        "executionDate": "2023-11-29"
+      },
+      {
+        "paymentId": "pay_823f0e0d-f1f2-416f-ada1-1cabb6144668",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "188.05",
+        "currency": "GBP",
+        "paymentReference": "Invoice #9964",
+        "executionDate": "2023-01-19"
+      },
+      {
+        "paymentId": "pay_74c40e26-814a-4078-aab2-72f2b4b59653",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "345.10",
+        "currency": "EUR",
+        "paymentReference": "Invoice #7752",
+        "executionDate": "2023-03-21"
+      },
+      {
+        "paymentId": "pay_e22ea512-d176-4e65-9bc9-744bd1b9647f",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "342.77",
+        "currency": "USD",
+        "paymentReference": "Invoice #1505",
+        "executionDate": "2024-05-06"
+      },
+      {
+        "paymentId": "pay_fda63789-704e-45df-bed6-9dd423b7b737",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "GB33BUKB20201555555555",
+        "amount": 1000.5,
+        "currency": "EUR",
+        "paymentReference": "Invoice #2024-0023",
+        "executionDate": "2024-09-30"
+      }
+    ],
+    "timestamp": "2024-10-01T09:15:49.675Z"
+  },
+  {
+    "url": "/payments-service/payments/payment-id-1234",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:15:51.588Z"
+  },
+  {
+    "url": "/payments-service/payments/payment-id-1234",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_084d9d12-cecb-4050-8fae-b43998fd6d84",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE09876543210987654321",
+        "amount": "213.48",
+        "currency": "GBP",
+        "paymentReference": "Invoice #9766",
+        "executionDate": "2024-12-28"
+      },
+      {
+        "paymentId": "pay_d43c7991-2227-4e26-876b-41bda82652ea",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "304.88",
+        "currency": "EUR",
+        "paymentReference": "Invoice #2418",
+        "executionDate": "2024-06-08"
+      },
+      {
+        "paymentId": "pay_ae967eca-ca50-491b-a4b3-ffcd064b0359",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE09876543210987654321",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "376.52",
+        "currency": "USD",
+        "paymentReference": "Invoice #3544",
+        "executionDate": "2023-12-31"
+      },
+      {
+        "paymentId": "pay_93715085-6602-4509-83d7-52be8c9c5bcb",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "301.33",
+        "currency": "GBP",
+        "paymentReference": "Invoice #4861",
+        "executionDate": "2024-08-11"
+      },
+      {
+        "paymentId": "pay_ea5fac44-7b83-49bd-b24e-7b26330d4486",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "664.54",
+        "currency": "GBP",
+        "paymentReference": "Invoice #5776",
+        "executionDate": "2023-05-24"
+      },
+      {
+        "paymentId": "pay_827dff38-6471-47b9-ae5a-db49649d7da7",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "791.78",
+        "currency": "GBP",
+        "paymentReference": "Invoice #523",
+        "executionDate": "2023-01-03"
+      },
+      {
+        "paymentId": "pay_0c414e51-dfab-4845-809d-cd07e87bda36",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "995.90",
+        "currency": "GBP",
+        "paymentReference": "Invoice #3525",
+        "executionDate": "2023-11-29"
+      },
+      {
+        "paymentId": "pay_823f0e0d-f1f2-416f-ada1-1cabb6144668",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "188.05",
+        "currency": "GBP",
+        "paymentReference": "Invoice #9964",
+        "executionDate": "2023-01-19"
+      },
+      {
+        "paymentId": "pay_74c40e26-814a-4078-aab2-72f2b4b59653",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "345.10",
+        "currency": "EUR",
+        "paymentReference": "Invoice #7752",
+        "executionDate": "2023-03-21"
+      },
+      {
+        "paymentId": "pay_e22ea512-d176-4e65-9bc9-744bd1b9647f",
+        "status": "failed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "342.77",
+        "currency": "USD",
+        "paymentReference": "Invoice #1505",
+        "executionDate": "2024-05-06"
+      },
+      {
+        "paymentId": "pay_fda63789-704e-45df-bed6-9dd423b7b737",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "GB33BUKB20201555555555",
+        "amount": 1000.5,
+        "currency": "EUR",
+        "paymentReference": "Invoice #2024-0023",
+        "executionDate": "2024-09-30"
+      }
+    ],
+    "timestamp": "2024-10-01T09:15:51.595Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:15:53.413Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "POST",
+    "request": {
+      "name": "John Doe",
+      "iban": "DE89370400440532013000",
+      "balance": 1000.5,
+      "currency": "EUR"
+    },
+    "response": {
+      "accountId": "c74254bb-7d90-4692-b84f-6653137a62b2",
+      "name": "John Doe",
+      "iban": "DE89370400440532013000",
+      "balance": 1000.5,
+      "currency": "EUR",
+      "createdAt": "2024-10-01T09:15:53.419Z"
+    },
+    "timestamp": "2024-10-01T09:15:53.421Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:15:56.963Z"
+  },
+  {
+    "url": "/payments-service/payments",
+    "method": "GET",
+    "request": {},
+    "timestamp": "2024-10-01T09:15:56.972Z"
+  },
+  {
+    "url": "/payments-service/payments/payment-id-1234",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:15:58.948Z"
+  },
+  {
+    "url": "/payments-service/payments/payment-id-1234",
+    "method": "GET",
+    "request": {},
+    "timestamp": "2024-10-01T09:15:58.955Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:16:00.828Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "accountId": "914b858a-1392-45d6-8ca9-ef5e49b1bcd8",
+        "name": "Adrienne Watsica",
+        "iban": "DE30400400010000000201",
+        "balance": 841.67,
+        "currency": "EUR",
+        "createdAt": "2024-07-14T08:55:29.985Z"
+      },
+      {
+        "accountId": "3446e9ae-f0c9-44e9-a4be-96e112216054",
+        "name": "Wayne Von",
+        "iban": "DE30400400010000000201",
+        "balance": 56.62,
+        "currency": "EUR",
+        "createdAt": "2024-06-22T08:22:43.748Z"
+      },
+      {
+        "accountId": "94b9a002-a83b-4d5b-87d5-2bc8d13e275c",
+        "name": "Irving Goodwin I",
+        "iban": "DE30400400010000000201",
+        "balance": 156.45,
+        "currency": "EUR",
+        "createdAt": "2023-12-24T04:44:42.458Z"
+      },
+      {
+        "accountId": "60f0a045-cf18-4aba-b604-1f4713b0fe36",
+        "name": "Earl Kerluke",
+        "iban": "DE30400400010000000201",
+        "balance": 47.16,
+        "currency": "EUR",
+        "createdAt": "2024-05-20T09:20:31.825Z"
+      },
+      {
+        "accountId": "15ea1eda-5040-48fd-be3c-06ab63da10ee",
+        "name": "Dana Hodkiewicz",
+        "iban": "DE30400400010000000201",
+        "balance": 881.47,
+        "currency": "EUR",
+        "createdAt": "2024-03-22T09:32:14.070Z"
+      },
+      {
+        "accountId": "760c386b-3bcb-4190-b401-8fc7a731eb1c",
+        "name": "Eileen Kuhlman",
+        "iban": "DE30400400010000000201",
+        "balance": 962.74,
+        "currency": "EUR",
+        "createdAt": "2024-04-29T17:39:15.564Z"
+      },
+      {
+        "accountId": "4580d70e-205e-41b6-b250-335e885c7f0c",
+        "name": "Juana Hane",
+        "iban": "DE30400400010000000201",
+        "balance": 72.78,
+        "currency": "EUR",
+        "createdAt": "2024-04-30T18:59:34.286Z"
+      },
+      {
+        "accountId": "f39503c7-8660-4d89-b885-15653f262dc1",
+        "name": "Paulette Schroeder",
+        "iban": "DE30400400010000000201",
+        "balance": 927.26,
+        "currency": "EUR",
+        "createdAt": "2024-01-26T07:36:24.280Z"
+      },
+      {
+        "accountId": "a1a7696d-2b8a-4008-b4da-676b7e505c8f",
+        "name": "Ms. Carrie Sawayn",
+        "iban": "DE30400400010000000201",
+        "balance": 263.94,
+        "currency": "EUR",
+        "createdAt": "2023-12-01T21:25:14.442Z"
+      },
+      {
+        "accountId": "d5a584a8-c79c-4873-89f2-454f860d3e55",
+        "name": "Ronnie Erdman MD",
+        "iban": "DE30400400010000000201",
+        "balance": 17.7,
+        "currency": "EUR",
+        "createdAt": "2024-09-13T03:34:09.901Z"
+      },
+      {
+        "accountId": "cd5bed49-8d72-42eb-b5b8-b08dcac7e13c",
+        "name": "Tracey Shanahan Jr.",
+        "iban": "DE30400400010000000201",
+        "balance": 605.03,
+        "currency": "EUR",
+        "createdAt": "2024-06-09T22:35:53.133Z"
+      },
+      {
+        "accountId": "a8948cbd-5d2b-4971-92f2-e4de1782723f",
+        "name": "Horace Bartell",
+        "iban": "DE30400400010000000201",
+        "balance": 761.08,
+        "currency": "EUR",
+        "createdAt": "2024-04-22T15:41:29.075Z"
+      },
+      {
+        "accountId": "7bebb0be-5c40-4ba3-9491-7f0183c6baff",
+        "name": "Alvin Kilback",
+        "iban": "DE30400400010000000201",
+        "balance": 936.6,
+        "currency": "EUR",
+        "createdAt": "2024-05-02T16:51:42.925Z"
+      },
+      {
+        "accountId": "4ec3fd7e-63c0-44cb-be6b-75d70f5f1dc8",
+        "name": "Miss Blanca Marvin",
+        "iban": "DE30400400010000000201",
+        "balance": 96.59,
+        "currency": "EUR",
+        "createdAt": "2024-08-20T19:22:14.879Z"
+      },
+      {
+        "accountId": "866283b6-fb0b-4242-a435-7698e56de812",
+        "name": "Lucas Grady",
+        "iban": "DE30400400010000000201",
+        "balance": 188.01,
+        "currency": "EUR",
+        "createdAt": "2024-08-28T22:53:13.475Z"
+      },
+      {
+        "accountId": "d3b56bba-6d43-495f-b8a9-3cf78eaaea32",
+        "name": "Dr. Ann Satterfield",
+        "iban": "DE30400400010000000201",
+        "balance": 527.98,
+        "currency": "EUR",
+        "createdAt": "2024-07-18T22:00:59.018Z"
+      },
+      {
+        "accountId": "6734ef44-4882-4024-b14f-23999fa014da",
+        "name": "Billie Ratke",
+        "iban": "DE30400400010000000201",
+        "balance": 750.03,
+        "currency": "EUR",
+        "createdAt": "2024-08-22T15:20:41.363Z"
+      },
+      {
+        "accountId": "4bd1ab7a-ee53-45e5-9a29-272b61c08e49",
+        "name": "Samantha Borer",
+        "iban": "DE30400400010000000201",
+        "balance": 738.17,
+        "currency": "EUR",
+        "createdAt": "2024-04-25T14:01:23.015Z"
+      },
+      {
+        "accountId": "6e21f37c-d53d-44df-a040-f53f3ea97f35",
+        "name": "Dr. Wesley Gleason",
+        "iban": "DE30400400010000000201",
+        "balance": 18.34,
+        "currency": "EUR",
+        "createdAt": "2024-06-02T23:39:40.925Z"
+      },
+      {
+        "accountId": "f1e34590-fe4d-4112-9177-efbbe75557cf",
+        "name": "Derek Greenholt",
+        "iban": "DE30400400010000000201",
+        "balance": 872.12,
+        "currency": "EUR",
+        "createdAt": "2024-02-05T00:05:48.352Z"
+      },
+      {
+        "accountId": "c74254bb-7d90-4692-b84f-6653137a62b2",
+        "name": "John Doe",
+        "iban": "DE89370400440532013000",
+        "balance": 1000.5,
+        "currency": "EUR",
+        "createdAt": "2024-10-01T09:15:53.419Z"
+      }
+    ],
+    "timestamp": "2024-10-01T09:16:00.834Z"
+  },
+  {
+    "url": "/payments-service/payments/payment-id-1234",
+    "method": "GET",
+    "request": {},
+    "timestamp": "2024-10-01T09:16:02.508Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "POST",
+    "request": {
+      "name": "John Doe",
+      "iban": "DE89370400440532013000",
+      "balance": 1000.5,
+      "currency": "EUR"
+    },
+    "response": {
+      "accountId": "29e63112-3535-466a-a5f0-d3491f87e120",
+      "name": "John Doe",
+      "iban": "DE89370400440532013000",
+      "balance": 1000.5,
+      "currency": "EUR",
+      "createdAt": "2024-10-01T09:16:04.348Z"
+    },
+    "timestamp": "2024-10-01T09:16:04.349Z"
+  },
+  {
+    "url": "/accounts-service/accounts/account-id-1234",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T09:16:05.954Z"
+  },
+  {
+    "url": "/accounts-service/accounts/account-id-1234",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "accountId": "914b858a-1392-45d6-8ca9-ef5e49b1bcd8",
+        "name": "Adrienne Watsica",
+        "iban": "DE30400400010000000201",
+        "balance": 841.67,
+        "currency": "EUR",
+        "createdAt": "2024-07-14T08:55:29.985Z"
+      },
+      {
+        "accountId": "3446e9ae-f0c9-44e9-a4be-96e112216054",
+        "name": "Wayne Von",
+        "iban": "DE30400400010000000201",
+        "balance": 56.62,
+        "currency": "EUR",
+        "createdAt": "2024-06-22T08:22:43.748Z"
+      },
+      {
+        "accountId": "94b9a002-a83b-4d5b-87d5-2bc8d13e275c",
+        "name": "Irving Goodwin I",
+        "iban": "DE30400400010000000201",
+        "balance": 156.45,
+        "currency": "EUR",
+        "createdAt": "2023-12-24T04:44:42.458Z"
+      },
+      {
+        "accountId": "60f0a045-cf18-4aba-b604-1f4713b0fe36",
+        "name": "Earl Kerluke",
+        "iban": "DE30400400010000000201",
+        "balance": 47.16,
+        "currency": "EUR",
+        "createdAt": "2024-05-20T09:20:31.825Z"
+      },
+      {
+        "accountId": "15ea1eda-5040-48fd-be3c-06ab63da10ee",
+        "name": "Dana Hodkiewicz",
+        "iban": "DE30400400010000000201",
+        "balance": 881.47,
+        "currency": "EUR",
+        "createdAt": "2024-03-22T09:32:14.070Z"
+      },
+      {
+        "accountId": "760c386b-3bcb-4190-b401-8fc7a731eb1c",
+        "name": "Eileen Kuhlman",
+        "iban": "DE30400400010000000201",
+        "balance": 962.74,
+        "currency": "EUR",
+        "createdAt": "2024-04-29T17:39:15.564Z"
+      },
+      {
+        "accountId": "4580d70e-205e-41b6-b250-335e885c7f0c",
+        "name": "Juana Hane",
+        "iban": "DE30400400010000000201",
+        "balance": 72.78,
+        "currency": "EUR",
+        "createdAt": "2024-04-30T18:59:34.286Z"
+      },
+      {
+        "accountId": "f39503c7-8660-4d89-b885-15653f262dc1",
+        "name": "Paulette Schroeder",
+        "iban": "DE30400400010000000201",
+        "balance": 927.26,
+        "currency": "EUR",
+        "createdAt": "2024-01-26T07:36:24.280Z"
+      },
+      {
+        "accountId": "a1a7696d-2b8a-4008-b4da-676b7e505c8f",
+        "name": "Ms. Carrie Sawayn",
+        "iban": "DE30400400010000000201",
+        "balance": 263.94,
+        "currency": "EUR",
+        "createdAt": "2023-12-01T21:25:14.442Z"
+      },
+      {
+        "accountId": "d5a584a8-c79c-4873-89f2-454f860d3e55",
+        "name": "Ronnie Erdman MD",
+        "iban": "DE30400400010000000201",
+        "balance": 17.7,
+        "currency": "EUR",
+        "createdAt": "2024-09-13T03:34:09.901Z"
+      },
+      {
+        "accountId": "cd5bed49-8d72-42eb-b5b8-b08dcac7e13c",
+        "name": "Tracey Shanahan Jr.",
+        "iban": "DE30400400010000000201",
+        "balance": 605.03,
+        "currency": "EUR",
+        "createdAt": "2024-06-09T22:35:53.133Z"
+      },
+      {
+        "accountId": "a8948cbd-5d2b-4971-92f2-e4de1782723f",
+        "name": "Horace Bartell",
+        "iban": "DE30400400010000000201",
+        "balance": 761.08,
+        "currency": "EUR",
+        "createdAt": "2024-04-22T15:41:29.075Z"
+      },
+      {
+        "accountId": "7bebb0be-5c40-4ba3-9491-7f0183c6baff",
+        "name": "Alvin Kilback",
+        "iban": "DE30400400010000000201",
+        "balance": 936.6,
+        "currency": "EUR",
+        "createdAt": "2024-05-02T16:51:42.925Z"
+      },
+      {
+        "accountId": "4ec3fd7e-63c0-44cb-be6b-75d70f5f1dc8",
+        "name": "Miss Blanca Marvin",
+        "iban": "DE30400400010000000201",
+        "balance": 96.59,
+        "currency": "EUR",
+        "createdAt": "2024-08-20T19:22:14.879Z"
+      },
+      {
+        "accountId": "866283b6-fb0b-4242-a435-7698e56de812",
+        "name": "Lucas Grady",
+        "iban": "DE30400400010000000201",
+        "balance": 188.01,
+        "currency": "EUR",
+        "createdAt": "2024-08-28T22:53:13.475Z"
+      },
+      {
+        "accountId": "d3b56bba-6d43-495f-b8a9-3cf78eaaea32",
+        "name": "Dr. Ann Satterfield",
+        "iban": "DE30400400010000000201",
+        "balance": 527.98,
+        "currency": "EUR",
+        "createdAt": "2024-07-18T22:00:59.018Z"
+      },
+      {
+        "accountId": "6734ef44-4882-4024-b14f-23999fa014da",
+        "name": "Billie Ratke",
+        "iban": "DE30400400010000000201",
+        "balance": 750.03,
+        "currency": "EUR",
+        "createdAt": "2024-08-22T15:20:41.363Z"
+      },
+      {
+        "accountId": "4bd1ab7a-ee53-45e5-9a29-272b61c08e49",
+        "name": "Samantha Borer",
+        "iban": "DE30400400010000000201",
+        "balance": 738.17,
+        "currency": "EUR",
+        "createdAt": "2024-04-25T14:01:23.015Z"
+      },
+      {
+        "accountId": "6e21f37c-d53d-44df-a040-f53f3ea97f35",
+        "name": "Dr. Wesley Gleason",
+        "iban": "DE30400400010000000201",
+        "balance": 18.34,
+        "currency": "EUR",
+        "createdAt": "2024-06-02T23:39:40.925Z"
+      },
+      {
+        "accountId": "f1e34590-fe4d-4112-9177-efbbe75557cf",
+        "name": "Derek Greenholt",
+        "iban": "DE30400400010000000201",
+        "balance": 872.12,
+        "currency": "EUR",
+        "createdAt": "2024-02-05T00:05:48.352Z"
+      },
+      {
+        "accountId": "c74254bb-7d90-4692-b84f-6653137a62b2",
+        "name": "John Doe",
+        "iban": "DE89370400440532013000",
+        "balance": 1000.5,
+        "currency": "EUR",
+        "createdAt": "2024-10-01T09:15:53.419Z"
+      },
+      {
+        "accountId": "29e63112-3535-466a-a5f0-d3491f87e120",
+        "name": "John Doe",
+        "iban": "DE89370400440532013000",
+        "balance": 1000.5,
+        "currency": "EUR",
+        "createdAt": "2024-10-01T09:16:04.348Z"
+      }
+    ],
+    "timestamp": "2024-10-01T09:16:05.960Z"
   }
 ]
