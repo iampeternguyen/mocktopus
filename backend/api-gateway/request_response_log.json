@@ -1,2 +1,177 @@
 [
+  {
+    "url": "/accounts-service/accounts",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T07:22:34.284Z"
+  },
+  {
+    "url": "/accounts-service/accounts",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "accountId": "7f4da948-bf36-4edd-a96d-949f350aa5a5",
+        "name": "Sonia Schmeler",
+        "iban": "DE09876543210987654321",
+        "balance": 138.72,
+        "currency": "EUR",
+        "createdAt": "2024-03-02T20:35:36.505Z"
+      },
+      {
+        "accountId": "3dbfa34e-6f55-4bff-8f48-7285d8fcbbd8",
+        "name": "Jaime Gusikowski",
+        "iban": "DE09876543210987654321",
+        "balance": 160.08,
+        "currency": "EUR",
+        "createdAt": "2024-07-03T05:08:06.892Z"
+      },
+      {
+        "accountId": "288ba0e9-8a7d-4076-9457-d068f35828e5",
+        "name": "Betty Tillman",
+        "iban": "DE09876543210987654321",
+        "balance": 861.96,
+        "currency": "EUR",
+        "createdAt": "2023-11-11T22:35:39.271Z"
+      },
+      {
+        "accountId": "ef01ded0-2de8-479e-acb5-fb46ea6e0b1a",
+        "name": "Rudolph Osinski",
+        "iban": "DE09876543210987654321",
+        "balance": 321.98,
+        "currency": "EUR",
+        "createdAt": "2024-09-26T08:52:56.349Z"
+      },
+      {
+        "accountId": "54db0148-1da6-4444-86dd-a7ac740d423d",
+        "name": "Mr. Seth Rippin",
+        "iban": "DE09876543210987654321",
+        "balance": 705.42,
+        "currency": "EUR",
+        "createdAt": "2024-07-04T08:18:58.817Z"
+      },
+      {
+        "accountId": "6761d416-01c9-40ee-b7b7-fbe1dd3de24e",
+        "name": "Marco Tillman",
+        "iban": "DE09876543210987654321",
+        "balance": 962.62,
+        "currency": "EUR",
+        "createdAt": "2023-10-08T07:00:28.109Z"
+      },
+      {
+        "accountId": "e10b6c88-416e-4cca-96a2-562b59ff2d05",
+        "name": "Sam Boyle",
+        "iban": "DE09876543210987654321",
+        "balance": 585.64,
+        "currency": "EUR",
+        "createdAt": "2024-03-14T13:54:45.200Z"
+      },
+      {
+        "accountId": "94477ebc-801a-40d9-8167-0b4188aeb743",
+        "name": "Mr. Vincent Ferry",
+        "iban": "DE09876543210987654321",
+        "balance": 289.5,
+        "currency": "EUR",
+        "createdAt": "2024-03-29T15:44:02.480Z"
+      },
+      {
+        "accountId": "6a296a47-15cf-4ab6-ac1f-2a2ee5d6a689",
+        "name": "Adrian Stamm",
+        "iban": "DE09876543210987654321",
+        "balance": 623.57,
+        "currency": "EUR",
+        "createdAt": "2023-12-03T08:59:28.081Z"
+      },
+      {
+        "accountId": "022eaa39-0878-4561-8d45-eb3508fae104",
+        "name": "Wendell Wehner",
+        "iban": "DE09876543210987654321",
+        "balance": 665.01,
+        "currency": "EUR",
+        "createdAt": "2024-01-06T17:52:41.713Z"
+      },
+      {
+        "accountId": "00418068-b643-4af7-9c35-6c0349f56b20",
+        "name": "Sherry Upton",
+        "iban": "DE09876543210987654321",
+        "balance": 271.04,
+        "currency": "EUR",
+        "createdAt": "2024-05-05T15:15:16.017Z"
+      },
+      {
+        "accountId": "ae5794a7-6ac5-4947-bc3f-a787caec9ee7",
+        "name": "Glenn West",
+        "iban": "DE09876543210987654321",
+        "balance": 720.01,
+        "currency": "EUR",
+        "createdAt": "2024-08-11T09:01:33.169Z"
+      },
+      {
+        "accountId": "3ebb3142-9bca-445a-a607-85c17bdc7559",
+        "name": "Paulette Jaskolski",
+        "iban": "DE09876543210987654321",
+        "balance": 475.54,
+        "currency": "EUR",
+        "createdAt": "2024-05-25T20:26:11.011Z"
+      },
+      {
+        "accountId": "1598a37d-25db-4eba-94f0-05c1d5bd97a7",
+        "name": "Guillermo Kuhlman",
+        "iban": "DE09876543210987654321",
+        "balance": 638.06,
+        "currency": "EUR",
+        "createdAt": "2024-09-13T16:17:24.376Z"
+      },
+      {
+        "accountId": "d93e12d0-763b-492d-9293-7d5c62d4a625",
+        "name": "Verna Heaney",
+        "iban": "DE09876543210987654321",
+        "balance": 399.33,
+        "currency": "EUR",
+        "createdAt": "2024-07-04T08:29:49.268Z"
+      },
+      {
+        "accountId": "bc387239-fde9-4b7e-b492-ac1839894c94",
+        "name": "Ms. Pamela Reichert",
+        "iban": "DE09876543210987654321",
+        "balance": 856.08,
+        "currency": "EUR",
+        "createdAt": "2024-03-21T17:59:00.443Z"
+      },
+      {
+        "accountId": "803e446f-aa94-46f1-98b7-10bf9dc663f5",
+        "name": "Tomas Altenwerth",
+        "iban": "DE09876543210987654321",
+        "balance": 31.72,
+        "currency": "EUR",
+        "createdAt": "2024-03-05T15:57:52.187Z"
+      },
+      {
+        "accountId": "92c2178e-803f-4ef4-ab11-816545289dca",
+        "name": "April MacGyver",
+        "iban": "DE09876543210987654321",
+        "balance": 122.14,
+        "currency": "EUR",
+        "createdAt": "2023-12-23T11:42:55.657Z"
+      },
+      {
+        "accountId": "6be41bde-5e71-407f-aff2-345c14b0ec65",
+        "name": "Lee Flatley",
+        "iban": "DE09876543210987654321",
+        "balance": 775.01,
+        "currency": "EUR",
+        "createdAt": "2024-04-14T15:48:12.119Z"
+      },
+      {
+        "accountId": "f6e8f3bd-8f94-4674-bab5-4c423a46725f",
+        "name": "Mattie Hagenes",
+        "iban": "DE09876543210987654321",
+        "balance": 682.87,
+        "currency": "EUR",
+        "createdAt": "2024-02-29T12:38:36.681Z"
+      }
+    ],
+    "timestamp": "2024-10-01T07:22:34.295Z"
+  }
 ]
