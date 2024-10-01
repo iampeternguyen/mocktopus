@@ -109,6 +109,7 @@ async function getChatGptResponse(url, method, logData) {
     );
     console.log(response.data);
 
+    console.log(response.data.choices[0].message.content);
     return JSON.parse(response.data.choices[0].message.content); // Extract the content from the response
   } catch (error) {
     console.error("Error getting response from ChatGPT:", error.message);

@@ -673,5 +673,130 @@
       }
     ],
     "timestamp": "2024-10-01T08:22:13.506Z"
+  },
+  {
+    "url": "/payments-service/payments/payment-id-1234",
+    "method": "OPTIONS",
+    "request": {},
+    "response": "POST,GET,HEAD",
+    "timestamp": "2024-10-01T08:39:55.113Z"
+  },
+  {
+    "url": "/payments-service/payments/payment-id-1234",
+    "method": "GET",
+    "request": {},
+    "response": [
+      {
+        "paymentId": "pay_44723337-12b2-4fc7-b4be-c41231c1819f",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "556.76",
+        "currency": "GBP",
+        "paymentReference": "Invoice #1590",
+        "executionDate": "2024-04-02"
+      },
+      {
+        "paymentId": "pay_6ccc0f80-4a4e-4417-b15c-55a48dab9ec8",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE29500105170648489890",
+        "amount": "334.29",
+        "currency": "EUR",
+        "paymentReference": "Invoice #5464",
+        "executionDate": "2024-12-25"
+      },
+      {
+        "paymentId": "pay_076ba104-66e9-4772-9838-2383b9796b27",
+        "status": "pending",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "654.09",
+        "currency": "EUR",
+        "paymentReference": "Invoice #713",
+        "executionDate": "2024-08-01"
+      },
+      {
+        "paymentId": "pay_6f99a4a7-bd72-4b88-962a-0d908e50f4fc",
+        "status": "pending",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "462.19",
+        "currency": "EUR",
+        "paymentReference": "Invoice #8529",
+        "executionDate": "2023-05-03"
+      },
+      {
+        "paymentId": "pay_7200bfd2-ce18-448e-8073-7e09b4bff768",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE89370400440532013000",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "306.67",
+        "currency": "USD",
+        "paymentReference": "Invoice #3024",
+        "executionDate": "2023-12-15"
+      },
+      {
+        "paymentId": "pay_aa697b0a-038e-4353-a392-d4831590c7d1",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "426.05",
+        "currency": "EUR",
+        "paymentReference": "Invoice #4843",
+        "executionDate": "2024-09-09"
+      },
+      {
+        "paymentId": "pay_18e9367f-b82c-4434-b8f3-4efc9534e5c0",
+        "status": "completed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE29500105170648489890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "529.11",
+        "currency": "USD",
+        "paymentReference": "Invoice #8217",
+        "executionDate": "2024-11-11"
+      },
+      {
+        "paymentId": "pay_ebbd6ac1-c491-431f-9c4c-1998956838a1",
+        "status": "completed",
+        "paymentType": "SEPA",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE89370400440532013000",
+        "amount": "928.12",
+        "currency": "EUR",
+        "paymentReference": "Invoice #812",
+        "executionDate": "2024-04-11"
+      },
+      {
+        "paymentId": "pay_8c7bba23-94c7-4bb3-8ffd-eccb8531725b",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE12345678901234567890",
+        "debtorAccount": "DE30400400010000000201",
+        "amount": "817.29",
+        "currency": "USD",
+        "paymentReference": "Invoice #6517",
+        "executionDate": "2023-06-21"
+      },
+      {
+        "paymentId": "pay_a8071635-d708-4ed8-ba6d-95b0e0339d6c",
+        "status": "failed",
+        "paymentType": "SWIFT",
+        "creditorAccount": "DE30400400010000000201",
+        "debtorAccount": "DE12345678901234567890",
+        "amount": "687.43",
+        "currency": "EUR",
+        "paymentReference": "Invoice #1370",
+        "executionDate": "2023-12-07"
+      }
+    ],
+    "timestamp": "2024-10-01T08:39:55.128Z"
   }
 ]
