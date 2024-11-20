@@ -1,0 +1,318 @@
+openapi: 3.0.0
+info:
+  title: Exchange Rates & Money Transfer API
+  description: API for managing currency exchange rates and cross-border/domestic money transfers.
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/v1
+    description: Production Server
+paths:
+  /exchange-rates:
+    get:
+      summary: Get live exchange rates
+      description: Fetch the current exchange rates for supported currency pairs.
+      tags:
+        - Exchange Rates
+      parameters:
+        - name: baseCurrency
+          in: query
+          required: true
+          description: The base currency to compare against other currencies (ISO 4217 format)
+          schema:
+            type: string
+            example: "USD"
+        - name: targetCurrency
+          in: query
+          required: false
+          description: The target currency to retrieve the rate for. If omitted, fetch rates for all currencies.
+          schema:
+            type: string
+            example: "EUR"
+      responses:
+        '200':
+          description: Exchange rates successfully retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  baseCurrency:
+                    type: string
+                    example: "USD"
+                  rates:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        targetCurrency:
+                          type: string
+                          example: "EUR"
+                        rate:
+                          type: number
+                          example: 0.85
+                        timestamp:
+                          type: string
+                          format: date-time
+                          description: When the rate was last updated
+                          example: "2024-09-30T10:15:30Z"
+        '400':
+          description: Invalid currency code
+        '500':
+          description: Server error
+
+  /money-transfers:
+    post:
+      summary: Initiate a money transfer
+      description: Start a cross-border or domestic money transfer between two accounts in different currencies.
+      tags:
+        - Money Transfers
+      requestBody:
+        description: Details of the money transfer
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sourceAccount:
+                  type: string
+                  description: IBAN or account number of the source account
+                  example: "US1234567890123456789"
+                sourceCurrency:
+                  type: string
+                  description: Currency of the source account (ISO 4217 format)
+                  example: "USD"
+                destinationAccount:
+                  type: string
+                  description: IBAN or account number of the destination account
+                  example: "DE89370400440532013000"
+                destinationCurrency:
+                  type: string
+                  description: Currency of the destination account (ISO 4217 format)
+                  example: "EUR"
+                amount:
+                  type: number
+                  format: float
+                  description: Amount to transfer (in source currency)
+                  example: 1000.00
+                reference:
+                  type: string
+                  description: Transfer reference (e.g., invoice number)
+                  example: "Invoice 2024-00012"
+                transferType:
+                  type: string
+                  description: Type of transfer (e.g., SWIFT, SEPA, domestic)
+                  example: "SWIFT"
+                executionDate:
+                  type: string
+                  format: date
+                  description: Date when the transfer should be executed
+                  example: "2024-10-01"
+      responses:
+        '201':
+          description: Transfer successfully created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  transferId:
+                    type: string
+                    description: Unique identifier for the transfer
+                    example: "tx_123456789"
+                  status:
+                    type: string
+                    description: The current status of the transfer (pending, completed, failed)
+                    example: "pending"
+        '400':
+          description: Invalid input data (e.g., incorrect account numbers or unsupported currencies)
+        '500':
+          description: Server error
+
+  /money-transfers/{transferId}:
+    get:
+      summary: Get transfer status
+      description: Retrieve the status of a specific money transfer.
+      tags:
+        - Money Transfers
+      parameters:
+        - name: transferId
+          in: path
+          required: true
+          description: Unique identifier for the transfer
+          schema:
+            type: string
+            example: "tx_123456789"
+      responses:
+        '200':
+          description: Transfer status successfully retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  transferId:
+                    type: string
+                    example: "tx_123456789"
+                  status:
+                    type: string
+                    example: "completed"
+                  sourceAccount:
+                    type: string
+                    example: "US1234567890123456789"
+                  destinationAccount:
+                    type: string
+                    example: "DE89370400440532013000"
+                  amount:
+                    type: number
+                    format: float
+                    example: 1000.00
+                  sourceCurrency:
+                    type: string
+                    example: "USD"
+                  destinationCurrency:
+                    type: string
+                    example: "EUR"
+                  exchangeRate:
+                    type: number
+                    description: The exchange rate applied to the transfer
+                    example: 0.85
+                  transferredAmount:
+                    type: number
+                    description: The amount that was transferred in the destination currency
+                    example: 850.00
+        '404':
+          description: Transfer not found
+        '500':
+          description: Server error
+
+  /exchange-rates/historical:
+    get:
+      summary: Get historical exchange rates
+      description: Retrieve historical exchange rates for a specific currency pair and date range.
+      tags:
+        - Exchange Rates
+      parameters:
+        - name: baseCurrency
+          in: query
+          required: true
+          description: The base currency (ISO 4217 format)
+          schema:
+            type: string
+            example: "USD"
+        - name: targetCurrency
+          in: query
+          required: true
+          description: The target currency (ISO 4217 format)
+          schema:
+            type: string
+            example: "EUR"
+        - name: fromDate
+          in: query
+          required: true
+          description: Start date for historical data (inclusive)
+          schema:
+            type: string
+            format: date
+            example: "2024-01-01"
+        - name: toDate
+          in: query
+          required: false
+          description: End date for historical data (inclusive)
+          schema:
+            type: string
+            format: date
+            example: "2024-09-30"
+      responses:
+        '200':
+          description: Historical exchange rates successfully retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  baseCurrency:
+                    type: string
+                    example: "USD"
+                  targetCurrency:
+                    type: string
+                    example: "EUR"
+                  rates:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        date:
+                          type: string
+                          format: date
+                          example: "2024-01-01"
+                        rate:
+                          type: number
+                          example: 0.85
+        '400':
+          description: Invalid currency code or date range
+        '500':
+          description: Server error
+
+  /money-transfers:
+    get:
+      summary: List all transfers
+      description: Retrieve a list of all money transfers, with optional filters for status or date.
+      tags:
+        - Money Transfers
+      parameters:
+        - name: status
+          in: query
+          required: false
+          description: Filter by transfer status (pending, completed, failed)
+          schema:
+            type: string
+          example: "completed"
+        - name: fromDate
+          in: query
+          required: false
+          description: Filter by transfers from this date (inclusive)
+          schema:
+            type: string
+            format: date
+            example: "2024-01-01"
+        - name: toDate
+          in: query
+          required: false
+          description: Filter by transfers until this date (inclusive)
+          schema:
+            type: string
+            format: date
+            example: "2024-12-31"
+      responses:
+        '200':
+          description: List of money transfers successfully retrieved
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    transferId:
+                      type: string
+                      example: "tx_123456789"
+                    status:
+                      type: string
+                      example: "completed"
+                    sourceAccount:
+                      type: string
+                      example: "US1234567890123456789"
+                    destinationAccount:
+                      type: string
+                      example: "DE89370400440532013000"
+                    amount:
+                      type: number
+                      example: 1000.00
+                    sourceCurrency:
+                      type: string
+                      example: "USD"
+                    destinationCurrency:
+                      type: string
+                      example: "EUR"
+                   
